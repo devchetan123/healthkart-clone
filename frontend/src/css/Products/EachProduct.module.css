@@ -1,0 +1,53 @@
+.container{
+    width: 90%;
+    margin: 5%;
+    display: flex;
+    flex-grow: 1;
+    background-color: rgb(143, 145, 145);
+}
+.containerImage{
+    width: 70%;
+    margin: auto;
+}
+.containerData{
+    width: 90%;
+    margin: auto;
+    text-align: left;
+}
+h3,p,h5{
+    margin: 2%;
+}
+.byProduct>span{
+    color: rgb(2, 208, 245);
+    font-weight: 700;
+}
+.rate{
+    display: flex;
+    gap: 5px;
+    font-size: 15px;
+}
+.star{
+    font-size: 20px;
+    color: yellow;
+}
+.offer{
+    font-size: 12px;
+    font-weight: 600;
+    background-color: rgb(212, 65, 65);
+    color: white;
+    border: 0;
+    padding: 1%;
+    margin: 1%;
+    border-radius: 5px;
+}
+.price{
+    display: flex;
+    gap: 2%;
+}
+.price>p:nth-child(2){
+    text-decoration: line-through;
+    margin-top: 4%;
+}
+.price>p:nth-child(3){
+    margin-top: 4%;
+}
