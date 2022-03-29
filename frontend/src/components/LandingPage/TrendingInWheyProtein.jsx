@@ -9,14 +9,14 @@ import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
 import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
 import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 
-export const FlashSale = () => {
+export const TrendingInWheyProtein = () => {
     const [data, setData] = useState([]);
     useEffect(()=>{
         fetch("http://localhost:3000/landingPageArray")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.flashSale);
-            setData(res.flashSale)
+            console.log(res.trendingInWheyProtein);
+            setData(res.trendingInWheyProtein)
         })
         .catch((err)=>console.log(err))
     }, [])
@@ -24,8 +24,7 @@ export const FlashSale = () => {
     <div className={styles.tagBox}>
         <div className={styles.tag}>
             <div className={styles.tagName}>
-                <img src="https://static1.hkrtcdn.com/hknext/static/media/common/misc/flash-sale-black.svg" className={styles.tagImg}/>
-                <h3 style={{margin: "0px"}}>Flash Sale</h3>
+                <h3 style={{margin: "0px"}}>Trending In Whey Protein</h3>
             </div>
             <div>
                 <button className={styles.viewAllBtn}>View All</button>
