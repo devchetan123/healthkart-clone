@@ -1,0 +1,20 @@
+.containerOne{
+    border: 1px solid black;
+    width: 20%;
+    margin: 10% auto;
+    
+}
+.containerOne>h5{
+    text-align: left;
+    margin: 2% 10%;
+}
+.content{
+    display: flex;
+    gap: 2%;
+    margin: 0px 10px;
+}
+.content>p{
+    margin: 3%;
+    color: black;
+    text-decoration: none;   
+}
