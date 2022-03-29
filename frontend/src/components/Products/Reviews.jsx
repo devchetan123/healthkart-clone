@@ -1,7 +1,16 @@
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import Styles from "../../css/Products/Reviews.module.css"
+import StarIcon from '@mui/icons-material/Star';
+import ReviewForm from './SimpleDialog';
 
 export const Reviews = () => {
+    const [data,setData] = useState([])
+
+    useEffect(()=>{
+        fetch(`https://json-practice.herokuapp.com/reviews`)
+        .then((r)=>r.json())
+        .then((r)=>setData(r))
+    },[])
   return (
     <div>
         <div className={Styles.container} >
@@ -24,7 +33,37 @@ export const Reviews = () => {
                 <li>Faster muscle recovery: Each serving of this product fuels you with 5.3g of naturally occurring BCAAs to boost muscle recovery after intense workouts. BCAAs are also helpful in soothing muscle soreness and reducing fatigue. This makes it a perfect post-workout fuel.</li>   
                 <li>Free from Maltodextrin and sugar: The product is steered clear oo maltodextrin, an ingredient often used in low-quality supplements. Also, it is rich in taste with its chocolaty flavour but all calorie- conscious people can consume it without any worries as it contains no added sugars. </li>
             </ul>
-
+        </div>
+        <hr />
+        <div className={Styles.reviewContainer} >
+        <h2>Rating and Reviews</h2>
+        <div className={Styles.reviews} >
+            <div className={Styles.reviewImage}>
+                <img src="https://github.com/devchetan123/healthkart-clone/blob/product_page/frontend/src/img/review.png?raw=true" alt="" />
+                <hr />
+                <ReviewForm/>
+            </div>
+            <div>
+                {
+                    data.map((item)=>{
+                        return(
+                            <div className={Styles.reviewBox} key={item.id} >
+                                <div className={Styles.reviewsRender} >
+                                    <p>{item.star} <StarIcon style={{fontSize:'10px'}} /></p>
+                                    <h4>{item.title}</h4>
+                                </div>
+                                <p>{item.review}</p>
+                                <div className={Styles.controller} >
+                                    <button>Helpful</button>
+                                    <button>|</button>
+                                    <button>Report Abuse</button>
+                                </div>
+                            </div>
+                        )
+                    })
+                }
+            </div>
+        </div>
         </div>
     </div>
   )

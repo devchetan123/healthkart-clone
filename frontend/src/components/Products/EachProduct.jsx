@@ -65,12 +65,12 @@ export default function EachProduct() {
         <div>
             <h3 className={Styles.byProduct}>{user.title}</h3>
             <p className={Styles.byProduct}>By <span>HealthKart</span></p>
-            <h5 className={Styles.rate}>{user.rating} <span><StarIcon className={Styles.star} /></span> </h5>
+            <h5 className={Styles.rate}>{user.rating} <span><StarIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)"}} /></span> </h5>
             <button className={Styles.offer} >{`${user.discount}% OFF`}</button>
             <div className={Styles.price} >
                 <h2>{`₹${user.price}`}</h2>
                 <p>₹{Math.floor(user.price+(user.price*(user.discount/100)))}</p>
-                <p>+ <span><CircleIcon className={Styles.circle} /></span>Get HK Cash </p>
+                <p>+ <span><CircleIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)",marginTop:"10px",marginLeft:"2px",marginRight:"2px"}} /></span>Get HK Cash +₹175</p>
             </div>
             <div className={Styles.offers} >
               <p>3 interent free payments of ₹175</p>
@@ -107,10 +107,10 @@ export default function EachProduct() {
                    <input type="text" placeholder="Enter Pincode" />
                    <button>Check</button>
               </div>
-              <p><GpsFixedIcon className={Styles.devIcon} /> USE MY LOCATION</p>
-              <p><DoneIcon className={Styles.devIcon}/> Free Shiping</p>
-              <p><DoneIcon className={Styles.devIcon}/> Cash on Delivery Available</p>
-              <p><DoneIcon className={Styles.devIcon}/> 14 days Return</p>
+              <p><GpsFixedIcon style={{fontSize:"13px"}} /> USE MY LOCATION</p>
+              <p><DoneIcon style={{fontSize:"13px"}}/> Free Shiping</p>
+              <p><DoneIcon style={{fontSize:"13px"}}/> Cash on Delivery Available</p>
+              <p><DoneIcon style={{fontSize:"13px"}}/> 14 days Return</p>
         </div>      
         <div className={Styles.sponsor}>
               <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/fssai.png" alt="" />
