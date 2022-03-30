@@ -1,3 +1,4 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 /* eslint-disable jsx-a11y/alt-text */
 import React, { useEffect, useState } from 'react'
 import styles from "./LandingPage.module.css"
@@ -5,27 +6,27 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import { Container } from './Container';
 
-export const JustLaunchedProducts = () => {
-    const [data, setData] = useState([]);
+export const PopularsContainer = ({items, tag}) => {
+    const [val, setVal] = useState([]);
+    // useEffect(()=>{
+    //     setVal(items)
+    //     console.log({items})
+    // })
     useEffect(()=>{
         fetch("http://localhost:3000/landingPageArray")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.justLaunchedProducts);
-            setData(res.justLaunchedProducts)
+            console.log(res.popularInSportsNutrition);
+            setVal(res.popularInSportsNutrition)
         })
         .catch((err)=>console.log(err))
-    }, [])
+    }, [])  
   return (
-    <div className={styles.tagBox}>
+    <div className={styles.tagBoxOfPopularItems}>
         <div className={styles.tag}>
             <div className={styles.tagName}>
-                <h3 style={{margin: "0px"}}>Just Launched Products</h3>
-            </div>
-            <div>
-                <button className={styles.viewAllBtn}>View All</button>
+                <h3 style={{margin: "0px"}}>{tag}</h3>
             </div>
         </div>
         <Carousel
@@ -52,7 +53,7 @@ export const JustLaunchedProducts = () => {
                 max: 3000,
                 min: 750
                 },
-                items: 4,
+                items: 5,
                 partialVisibilityGutter: 40
             },
             mobile: {
@@ -60,7 +61,7 @@ export const JustLaunchedProducts = () => {
                 max: 460,
                 min: 0
                 },
-                items: 1,
+                items: 2,
                 partialVisibilityGutter: 30
             },
             tablet: {
@@ -76,10 +77,18 @@ export const JustLaunchedProducts = () => {
             sliderClass=""
             slidesToSlide={4}
             swipeable
-            className={styles.carouselBox}
+            className={styles.carouselBoxOfPopularItems}
             >
-            {data.map((item) => (
-                <Container item={item}/>
+            {val.map((item) => (
+                <div key={item.id} className={styles.imageBox}>
+                    <div className={styles.itemsList}>
+                        <img src={item.img_url} alt="titles" className={styles.imageSize}/>
+                        <p className={styles.imageName}>{item.title}</p>
+                    </div>
+                    <div className={styles.borderLine}>
+                        <br/>
+                    </div>
+                </div>
             ))}
         </Carousel>
     </div>

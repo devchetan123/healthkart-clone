@@ -5,9 +5,7 @@ import Carousel from 'react-multi-carousel';
 import 'react-multi-carousel/lib/styles.css';
 import ArrowCircleLeftIcon from '@mui/icons-material/ArrowCircleLeft';
 import ArrowCircleRightIcon from '@mui/icons-material/ArrowCircleRight';
-import CurrencyRupeeIcon from '@mui/icons-material/CurrencyRupee';
-import AddShoppingCartIcon from '@mui/icons-material/AddShoppingCart';
-import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
+import { Container } from './Container';
 
 export const TrendingInWheyProtein = () => {
     const [data, setData] = useState([]);
@@ -81,28 +79,7 @@ export const TrendingInWheyProtein = () => {
             className={styles.carouselBox}
             >
             {data.map((item) => (
-                <div key={item.id} >
-                    <div className={styles.container}>
-                        <img src={item.img_url} className={styles.itemImage}></img>
-                        <div><button className={styles.discountBtn}>{item.discount} off</button></div>
-                        <h5 className={styles.title}>{item.title}</h5>
-                        <h6 className={styles.rating}>{item.rating}</h6>
-                        <div className={styles.priceAndAdd}>
-                            <div className={styles.price}>
-                                <h5 className={styles.discountPrice}><CurrencyRupeeIcon sx={{color: "black", fontSize: "12px"}}/>{item.discountedPrice}</h5>
-                                <h5 className={styles.originalPrice}><CurrencyRupeeIcon sx={{color: "#929495", fontSize: "10px"}}/>{item.originalPrice}</h5>
-                            </div>
-                            <div>
-                                <button className={styles.addBtn}><div style={{display: "flex", width: "35px", margin: "auto"}}><AddShoppingCartIcon sx={{color: "#004b5d", fontSize: "12px"
-                            }}/><p style={{margin: "2px"}}>ADD</p></div></button>
-                            </div>
-                        </div>
-                    </div>
-                    <div className={styles.premiumPriceBox}>
-                        <h5 style={{margin: "0px"}}>Premium Price: <CurrencyRupeeIcon sx={{color: "black", fontSize: "14px"}}/>{item.premiumPrice}</h5>
-                        <LockOutlinedIcon sx={{fontSize: "12px"}}/>
-                    </div>
-                </div>
+                <Container item={item}/>
             ))}
         </Carousel>
     </div>
