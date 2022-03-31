@@ -12,6 +12,8 @@ import CircleIcon from '@mui/icons-material/Circle';
 import GpsFixedIcon from '@mui/icons-material/GpsFixed';
 import DoneIcon from '@mui/icons-material/Done';
 import { Reviews } from "./Reviews";
+import NavbarTopSec from "../NavbarTopSec";
+import { Navbar } from "../Navbar";
 
 export default function EachProduct() {
   const [user, setUser] = useState({});
@@ -44,9 +46,11 @@ export default function EachProduct() {
 
   return (
     <div>
+      <NavbarTopSec />
+      <Navbar/>
       <div className={Styles.container} >
       <div className={Styles.containerImage} >
-        <img src={user.image} alt="" />
+        <img src={user.image} alt=""/>
         <div className={Styles.imgDisp} >
         <img src={user.image} alt="" />
         <img src={user.image} alt="" />

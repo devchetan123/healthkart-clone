@@ -9,7 +9,7 @@ function App() {
     <div className="App">
        <Routers/>
        {/* <Navbar/> */}
-       {/* <LeftRight/> */}
+       
        {/* <TopNavbar/> */}
     </div>
   );
