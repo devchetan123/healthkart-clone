@@ -1,0 +1,18 @@
+.phoneInput{
+    width: 90%;
+    font-size: 20px;
+}
+.gouth{
+    height: 30px;
+    width: 100%;
+}
+.button{
+    border: 0px;
+    color: white;
+    width: 90%;
+    margin: auto;
+    font-size: 15px;
+    background-color: #00aeae;
+    padding: 3%;
+    border-radius: 10px;
+}

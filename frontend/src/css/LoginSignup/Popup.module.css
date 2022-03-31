@@ -1,4 +1,23 @@
 .leftBar{
     height: auto;
-    background-color:blue ;
+}
+
+.login{
+    display: flex;
+     
+}
+
+.loginLeft{
+    padding: 3%;
+    background-image: url(https://static1.hkrtcdn.com/hknext/static/media/signupFlow/login-bg.png);
+    height: 400px;
+    color: white;
+}
+.loginLeft>p{
+    font-size: 15px;
+    font-weight: 700;
+}
+.tabnav{
+    background-color: white;
+    color: black;
 }
