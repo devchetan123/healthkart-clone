@@ -1,8 +1,12 @@
 import React from 'react'
+import LoginSIgnup from './Auth/LoginSIgnup'
+
 
 function Home() {
   return (
-    <div>Home</div>
+    <div style={{backgroundColor:"blue",}} >
+      <LoginSIgnup/>
+    </div>
   )
 }
 
