@@ -32,7 +32,7 @@ export const updateValue = (key, values) => {
 export const deleteValue = (key, id) => {
     let cart = JSON.parse(localStorage.getItem(key))
 
-    let afterdel = cart.filter(x => x.id != id)
+    let afterdel = cart.filter(x => x.id !== id)
 
     localStorage.setItem(key, JSON.stringify(afterdel))
 }
