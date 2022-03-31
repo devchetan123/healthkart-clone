@@ -224,11 +224,33 @@ position: relative;
     border:1px solid gray;
     width:100%;
     /* box-sizing: border-box; */
-    /* padding:10%; */
-    
-    
-    
+    /* padding:10%; */    
 
+}
+
+.rightdiv1{
+    border:1px solid #d8faf9;
+    margin:10px;
+    background:#d8faf9;
+    border-radius: 4px;
+    
+    
+}
+
+.rightdiv1:hover{
+    background:#00c2c1;
+   
+}
+.rightdiv2{
+    border:1px solid #c3d1d1;
+    border-radius: 4px;
+    margin:10px;
+    background-color: #c3d1d1;
+}
+.righta{
+    width:150px;
+    
+    
 }
 
 /* banner */

@@ -126,3 +126,21 @@
      color:#aaa;
      margin-top:3%;
  }
+
+ @media screen and (max-width:750px){
+     .sorting{
+         display:none;
+     }
+     .proteinimg{
+        width:730px;
+      }
+      .quickbuy{
+        margin : 0;
+      }
+      hr{
+          display:none;
+      }
+ }
+ @media screen and (max-width:420px){
+
+ }

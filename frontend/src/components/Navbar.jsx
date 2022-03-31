@@ -233,11 +233,17 @@ export const Navbar = () => {
                     </div>
                     {/* menu end here */}
                     <div className={[styles.headerItem, styles.itemRight].join(' ')}>
-                        <div>
-                           <a href = "/#"> HK consult</a>
+                        <div className={styles.rightdiv1}>
+                           <a href = "/#" className={styles.righta}>
+                               
+                              
+                                   <img src = "https://static1.hkrtcdn.com/hknext/static/media/common/header/hk-consult.svg" alt = "msg"/>
+                               &nbsp;&nbsp;HK consult </a>
                         </div>
-                        <div>
-                          <a href = "/#"> Find a store</a>
+                        <div className={styles.rightdiv2}>
+                          <a href = "/#" className={styles.righta}>
+                              <img src = "https://static1.hkrtcdn.com/hknext/static/media/common/header/location-pin.svg" alt="loc"/>
+                              &nbsp;&nbsp;Find a store</a>
                         </div>
 
                     </div>

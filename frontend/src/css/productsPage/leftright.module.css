@@ -8,5 +8,13 @@
     grid-template-columns: 35% 65%;
     border:1px solid black;
 }
+@media screen and (max-width:750px){
+    .wrapperleftright{
+        grid-template-columns: 100%;
+    }
+    
+}
+@media screen and (max-width:420px){
 
+}
 

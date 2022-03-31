@@ -9,8 +9,8 @@ export const Right = ({items,setItems}) => {
   return (
     <div>
         <div>
-            <span claaName={styles.proteinimg}>
-            <img src = "https://img2.hkrtcdn.com/10922/bnr_1092171_o.jpg" alt = "Protein img" />
+            <span >
+            <img src = "https://img2.hkrtcdn.com/10922/bnr_1092171_o.jpg" alt = "Protein img" claaName={styles.proteinimg} />
             </span>
             <div className={styles.discountandheart}>
                 <div><h2>Whey Protein </h2></div>
