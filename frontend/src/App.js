@@ -1,14 +1,14 @@
 import './App.css';
- import { Navbar } from './components/Navbar';
-import { LeftRight } from './components/productPage/LeftRight';
+ //import { Navbar } from './components/Navbar';
+//import { LeftRight } from './components/productPage/LeftRight';
 //import { TopNavbar } from './components/TopNavbar';
-// import Routers from './routes/Routers';
+ import Routers from './routes/Routers';
 
 function App() {
   return (
     <div className="App">
-       {/* <Routers/> */}
-       <Navbar/>
+       <Routers/>
+       {/* <Navbar/> */}
        {/* <LeftRight/> */}
        {/* <TopNavbar/> */}
     </div>
