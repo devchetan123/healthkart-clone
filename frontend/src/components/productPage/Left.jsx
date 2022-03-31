@@ -35,13 +35,7 @@ export const Left = ({items,setItems}) => {
 
         setItems(newitems);
       }
-    //   if (info === "departure_4") {
-    //     flights = flight.filter(
-    //       (item) => item.departure_time.split(":").join("") >= Number("1600")
-    //     );
-
-    //     setFlight(flights);
-    //   }
+ 
      }
     if (info.startsWith("rating")) {
       if (info === "rating_1") {
@@ -168,10 +162,7 @@ export const Left = ({items,setItems}) => {
                   <input type="checkbox" name="discount_3" />
                   <span>60% and above</span>
                 </div>
-                {/* <div style={{ flexDirection: "row", margin: "2%" }}>
-                  <input type="checkbox" name="departure_4" />
-                  <span>After 6 PM</span>
-                </div> */}
+               
               </div>
               <div
                 className={styles.first}
