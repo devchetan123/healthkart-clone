@@ -2,7 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "../../css/cartpage.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import Product from "./Product";
-import { totalCalculate } from "../../redux/Cart/cart.actions";
+import { add_cart, totalCalculate } from "../../redux/Cart/cart.actions";
 import { Link, useNavigate } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
 import { IconContext } from "react-icons";
@@ -60,12 +60,16 @@ function CartPage() {
     setTotalSave(totalDis);
   };
 
+  const [hideDiscount, setHideDiscount] = useState(false)
+
+  const [coupon, setCoupon] = useState("")
+
   return (
     <>
-      <div className={style.background}>
+      <div className={ !hideDiscount ? style.background : style.backgroundBlu}>
         <div className={style.maxScreenNav}>
           <div className={style.navMain}>
-            <img
+            <img  onClick={() => navigate("/")}
               src="https://i.ibb.co/NWKgftw/Screenshot-13.png"
               alt="logo"
               height={"60px"}
@@ -199,8 +203,8 @@ function CartPage() {
               </div>
 
 
-              <div className={style.discountBoxsmall}>
-                <div className={style.disocountDivsmall}>
+              <div className={style.discountBoxsmall} onClick={() => setHideDiscount(true)} >
+                <div className={style.disocountDivsmall}  >
                   <img
                     src="https://i.ibb.co/cwVtv17/icons8-discount-50.png"
                     alt=""
@@ -276,7 +280,7 @@ function CartPage() {
               </div>
 
               <div className={style.discountBox}>
-                <div className={style.disocountDiv}>
+                <div className={style.disocountDiv} onClick={() => setHideDiscount(true)} >
                   <img
                     src="https://i.ibb.co/cwVtv17/icons8-discount-50.png"
                     alt=""
@@ -361,8 +365,60 @@ function CartPage() {
               <p>₹{total}</p>
               <a href="#ordersum">View Summary</a>
             </div>
-            <button className={style.proceedpaybotm}>Proceed to Pay</button>
+            <button  onClick={() => navigate("/address")} className={style.proceedpaybotm}>Proceed to Pay</button>
       </div>
+
+
+      <div className={ hideDiscount ? style.discountpagediv : style.disountpagedivsec} >
+         <div className={style.applycoupon}  >
+           <img onClick={() => setHideDiscount(false)} className={style.canceldiscount} src="https://i.ibb.co/hXPZxc7/icons8-cross-48.png" alt="" />
+           <p>Apply Coupon</p>
+           <div>
+             <input type="text" placeholder="Enter Coupon Code" value={coupon} onChange={e => setCoupon(e.currentTarget.value)} />
+             <button  >Apply</button>
+           </div>
+         </div>
+         <div  className={style.mainmiddleoffers} > 
+         <p className={style.specialdiscount} >Special Offers for you</p>
+         <div className={style.mainmiddleoffers} >
+           <div className={style.firstofferdis} >
+             <div className={style.firstdicountpro} >
+               <img src="https://img8.hkrtcdn.com/14648/prd_1464767-HealthKart-Omega-3-1000mg-with-180mg-EPA-and-120mg-DHA-90-softgels_o.jpg" height={"55px"} alt="" />
+               <div className={style.detailsofproduct} >
+                 <p>Additional Rs.50 off on Healthkart Omega</p>
+                 <p>Add HealthKart Omega 3 1000mg with 180mg EPA and 120mg DHA, 90 softgels at cart and get Rs 451 off on MRP.</p>
+               </div>
+             </div>
+             <button onClick={() => dispatch(add_cart({
+               id : 9998,
+               title : "HealthKart HK Vitals Omega 3 1000mg with 180mg EPA and 120mg DHA",
+               price : 509,
+               img : "https://img8.hkrtcdn.com/14648/prd_1464767-HealthKart-Omega-3-1000mg-with-180mg-EPA-and-120mg-DHA-90-softgels_o.jpg",
+               qty : 1,
+               initPrice : 509
+             }))} className={style.addcartbtndis} >Add To Cart</button>
+           </div>
+           <div className={style.firstofferdis} >
+             <div className={style.firstdicountpro} >
+               <img src="https://img10.hkrtcdn.com/12771/prd_1277019-TrueBasics-Lung-Detox-30-capsules_o.jpg" height={"55px"} alt="" />
+               <div className={style.detailsofproduct} >
+                 <p>Additional Rs.35 off on TB Lung Detox 30 Tablets</p>
+                 <p>Buy any product in below categories and get TrueBasics Lung Detox 30 tablet(s) </p>
+               </div>
+             </div>
+             <button onClick={() => dispatch(add_cart({
+               id : 9999,
+               title : "TrueBasics Lung Detox,  30 tablet(s)",
+               price : 633,
+               img : "https://img10.hkrtcdn.com/12771/prd_1277019-TrueBasics-Lung-Detox-30-capsules_o.jpg",
+               qty : 1,
+               initPrice : 633
+             }))} className={style.addcartbtndis} >Add To Cart</button>
+           </div>
+         </div>
+         </div>
+      </div>
+
     </>
   );
 }

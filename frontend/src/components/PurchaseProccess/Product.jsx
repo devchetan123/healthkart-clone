@@ -31,7 +31,7 @@ function Product({ product }) {
     <div className={style.mainProductDiv} >
       <div className={style.mainDiv} >
         <div>
-            <img className={style.productImg} src={product.img} alt="" />
+            <img className={style.productImg} src={product.img} alt="" height={"100px"}  />
             <div className={style.deliveryDate} >
               <p>Delivery by</p>
               <p>5 Apr</p>
