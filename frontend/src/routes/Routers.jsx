@@ -4,7 +4,8 @@ import ProtectedRoute from '../components/Auth/components/ProtectedROute'
 import { UserAuthContextProvider } from '../components/Auth/context/UserAuthContext'
 import { Content } from '../components/Content'
 import Home from '../components/Home'
-import { ProfileStructure } from '../components/ProfileStructure/ProfileStructure'
+import  EachProduct  from '../components/Products/EachProduct'
+import { Products } from '../components/Products/Products'
 
 
 export  const Routers = () => {
@@ -12,16 +13,10 @@ export  const Routers = () => {
     <div>
       <UserAuthContextProvider>
         <Routes>
-        <Route
-                path="/content"
-                element={
-                  <ProtectedRoute>
-                    <Content/>
-                  </ProtectedRoute>
-                }
-              />
-              <Route path='/profile' element={<ProfileStructure/>} />
-              <Route path='/home' element={<Home/>} />
+          <Route path="/" element={<Home/>}/>
+          <Route path="/products/*" element={<Products/>}>
+          <Route path=':id' element={<EachProduct/>} />
+          </Route>
         </Routes>
       </UserAuthContextProvider>
         

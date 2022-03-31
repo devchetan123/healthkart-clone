@@ -1,11 +1,10 @@
 import React from 'react'
-import LoginSIgnup from './Auth/LoginSIgnup'
-
+import { Link } from 'react-router-dom'
 
 function Home() {
   return (
-    <div style={{backgroundColor:"blue",}} >
-      <LoginSIgnup/>
+    <div>
+      <Link to="/products" >Prod</Link>
     </div>
   )
 }
