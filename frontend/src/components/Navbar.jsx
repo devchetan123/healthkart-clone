@@ -2,8 +2,10 @@ import React from 'react'
 import styles from '../css/nav.module.css'
 
 
+
 export const Navbar = () => {
   return (
+    
     <div>
         {/* header strats here */}
         <header className={styles.header}>

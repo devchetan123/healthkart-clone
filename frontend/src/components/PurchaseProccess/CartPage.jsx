@@ -2,6 +2,7 @@ import React, { useEffect, useState } from "react";
 import style from "../../css/cartpage.module.css";
 import { useDispatch, useSelector } from "react-redux";
 import Product from "./Product";
+
 import { add_cart, totalCalculate } from "../../redux/Cart/cart.actions";
 import { Link, useNavigate } from "react-router-dom";
 import { BsFillCartFill } from "react-icons/bs";
@@ -28,14 +29,6 @@ function CartPage() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  useEffect(() => {
-    dispatch(totalCalculate());
-    calculateDiscount(total);
-    calculation();
-    if (cart.length === 0) {
-      setCartEmpty(false);
-    }
-  }, [total, cart, totalPrice]);
 
   const getCity = (pincode) => {
     fetch(`https://api.postalpincode.in/pincode/${pincode}`)
@@ -63,6 +56,15 @@ function CartPage() {
   const [hideDiscount, setHideDiscount] = useState(false)
 
   const [coupon, setCoupon] = useState("")
+
+  useEffect(() => {
+    dispatch(totalCalculate());
+    calculateDiscount(total);
+    calculation();
+    if (cart.length === 0) {
+      setCartEmpty(false);
+    }
+  }, [total, cart, totalPrice]);
 
   return (
     <>
@@ -145,6 +147,7 @@ function CartPage() {
             <div className={style.leftsection}>
               <div className={style.cartTop}>
                 <h3>My Cart ({cart.length} items)</h3>
+
                 <div className={style.wishlistbtn}>
                   <img
                     src="https://i.ibb.co/vd1SVV0/icons8-heart-32.png"
@@ -416,6 +419,7 @@ function CartPage() {
              }))} className={style.addcartbtndis} >Add To Cart</button>
            </div>
          </div>
+         {/* {console.log(cart)} */}
          </div>
       </div>
 

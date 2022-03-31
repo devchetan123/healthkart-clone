@@ -10,6 +10,10 @@ import { WhatAreYouLookingFor } from './WhatAreYouLookingFor'
 import { PopularsContainer } from './PopularsContainer'
 import { DownloadWrapper } from './DownloadWrapper'
 import { Footer } from '../Footer/Footer'
+import { Navbar } from "../Navbar"
+import NavbarTopSec from '../NavbarTopSec'
+import Home from '../Home'
+
 
 export const LandingPage = () => {
   const [data, setData] = useState([]);
@@ -24,6 +28,9 @@ export const LandingPage = () => {
       .catch((err)=>console.log(err))
   },[])
   return (
+    <>
+    <NavbarTopSec/>
+    <Navbar/>
     <div style={{background: "#F7F7F7"}}>
         <SwiperSlider />
         <FlashSale />
@@ -40,5 +47,6 @@ export const LandingPage = () => {
         <DownloadWrapper />
         <Footer />
     </div>
+    </>
   )
 }
