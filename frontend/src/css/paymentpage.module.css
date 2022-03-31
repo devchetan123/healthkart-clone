@@ -1,0 +1,816 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.wholebackground{
+  background-color: rgb(248, 248, 248);
+  font-family: "Roboto", sans-serif;
+  height: 100vh;
+}
+.mainContainer{
+  padding-top: 8vh;
+  display: grid;
+  grid-template-columns: 2.2fr 1.12fr;
+  gap: 35px;
+}
+
+.navMain {
+  display: flex;
+  box-shadow: 2.5px 2.5px 2.5px rgb(211, 211, 211);
+  background-color: white;
+  
+}
+
+.navMain > img {
+  margin-left: 35px;
+  cursor: pointer;
+
+}
+
+.process {
+  margin-left: 117px;
+  display: flex;
+  align-items: center;
+}
+
+.hrLine {
+  border-top: 1px solid black;
+  border-bottom: 1px solid white;
+  border-left: 1px solid white;
+  border-right: 1px solid white;
+  background-color: white;
+  width: 10vw;
+  margin-left: 4%;
+  margin-right: 4%;
+}
+
+.process p {
+  font-family: Roboto, sans-serif;
+  font-size: 12px;
+  color: rgb(77, 74, 74);
+}
+
+.process > img {
+  margin-right: 2.5px;
+}
+
+.choosePaymentHead{
+  font-size: 20px;
+  font-weight: 500;
+  background-color: white;
+  border-right: 1px solid rgb(214, 210, 210);
+  border-left: 1px solid rgb(214, 210, 210);
+  border-top: 1px solid rgb(214, 210, 210);
+  padding: 22px 0px 22px 20px;
+}
+
+.mainpaymentbox{
+  box-shadow: 0.4px -1px 3px 2px rgb(228, 228, 228);
+  margin-left: 5%;
+}
+
+.firstlinesimpl{
+  display: flex;
+  align-items: center;
+  margin-left: 30px;
+  margin-top: 20px;
+  gap: 10px;
+}
+
+.firstlinesimpl :nth-child(1){
+  height: 20px;
+  width: 20px;
+}
+
+.seclinesimpl{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  position: relative;
+  margin-left: 55px;
+  margin-top: 20px;
+
+}
+
+.seclinesimpl p{
+  font-size: 11px;
+  color: green;
+}
+
+.seclinesimpl :nth-child(3){
+  position: absolute;
+  right: 35px;
+}
+
+.threelinesimpl{
+  display: flex;
+  align-items: center;
+  position: relative;
+  margin-left: 55px;
+  margin-top: 10px;
+}
+
+.threelinesimpl p{
+  font-size: 14px;
+}
+
+.threelinesimpl :nth-child(2){
+  position: absolute;
+  right: 35px;
+}
+
+.fourlinesimpl{
+  display: flex;
+  align-items: center;
+  margin-top: 40px;
+}
+
+.fourlinesimpl button{
+  margin-left: 55px;
+  background-color: rgb(223,70,34);
+  border: none;
+  color: white;
+  font-weight: 500;
+  font-size: 15px;
+  border-radius: 5px;
+  padding: 16px 90px 16px 90px;
+  cursor: pointer;
+}
+
+.rightsidepaymentdet{
+  margin-right: 10%;
+}
+
+.addressdivpaypage{
+  background-color: white;
+  position: relative;
+  padding: 18px;
+  box-shadow: 1px 1px 2px 2px rgb(224, 223, 223);
+  border-radius: 4px;
+}
+
+.addfirstpaypage{
+  display: flex;
+  align-items: center;
+}
+.addfirstpaypage p{
+  font-size: 13px;
+  margin-left: 5px;
+}
+
+.addfirstpaypage button{
+  background-color: transparent;
+  border: none;
+  color: rgb(17, 174, 177);
+  font-weight: 500;
+  position: absolute;
+  right: 15px;
+}
+
+.addwithname{
+  margin-top: 10px;
+  line-height: 22px;
+}
+
+.addwithname :nth-child(1){
+  font-weight: 600;
+  font-size: 14px;
+}
+
+.addwithname :nth-child(2){
+  font-size: 13px;
+  color: rgb(88, 88, 88);
+}
+
+.addwithname :nth-child(3){
+  font-size: 13px;
+  color: rgb(88, 88, 88);
+}
+
+
+.ordersumbox {
+  background-color: white;
+  margin-top: 20px;
+  box-shadow: 1px 1px 2px 2px rgb(224, 223, 223);
+  border-radius: 5px;
+}
+
+.ordersumdiv {
+  background-color: rgb(241, 255, 255);
+  font-size: 15px;
+  font-weight: 500;
+  padding: 15px 10px 15px 18px;
+}
+
+.orderinnerdiv {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.leftOrderdet {
+  text-align: left;
+  padding-left: 18px;
+  color: rgb(85, 83, 83);
+  font-size: 14.5px;
+}
+
+.leftOrderdet > p {
+  padding: 10px 10px 10px 0px;
+}
+
+.rightOrderdet {
+  font-size: 14.5px;
+  text-align: right;
+  padding-right: 18px;
+  font-weight: 500;
+}
+
+.rightOrderdet p {
+  padding: 10px 0px 10px 10px;
+}
+
+.discountRed {
+  color: rgb(243, 49, 49);
+}
+
+.finalPayable {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-bottom: 7px;
+  margin-top: 7px;
+}
+
+.finalPayable :nth-child(1) {
+  text-align: left;
+  padding: 10px 10px 10px 18px;
+  font-weight: 500;
+}
+
+.finalPayable :nth-child(2) {
+  text-align: right;
+  padding: 10px 18px 10px 10px;
+  font-weight: 500;
+}
+
+.hrforsummary {
+  background-color: rgb(228, 215, 215);
+  height: 1px;
+  border: none;
+}
+
+.savetitle {
+  color: rgb(45, 183, 88);
+  padding-left: 18px;
+  font-size: 12px;
+  padding-bottom: 8px;
+}
+
+.safetitle{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 14px;
+  gap: 10px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  color: grey;
+}
+
+.paymentmethod{
+  display: flex;
+  justify-content: center;
+  gap: 5px;
+}
+.paymentmethod img {
+  height: 25px;
+}
+
+.mobileprocess{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 60px;
+}
+
+.mobileprocess img{
+  margin-right : 5px;
+  height: 18px;
+}
+
+.mobileprocess p{
+ font-size: 13px;
+ color: rgb(83, 82, 82);
+}
+
+.hrLine{
+  width: 80px;
+  background-color: rgb(59, 59, 59);
+}
+
+.navfirstLine {
+  display: flex;
+  position: relative;
+}
+
+.cartleftNav {
+  position: absolute;
+  left: 15px;
+  top: 15px;
+  display: flex;
+  gap: 8px;
+  align-items: center;
+  font-size: 20px;
+  font-weight: 500;
+}
+
+.navforsmaller{
+  display: none;
+}
+
+.upimethoddiv{
+  margin-left: 10%;
+  margin-top: 10%;
+}
+
+.upimethoddiv :nth-child(1){
+  font-weight: 500;
+  margin-bottom: 20px;
+}
+
+.upimethoddiv > input{
+  padding: 14px;
+  border: 1px solid rgb(199, 198, 198);
+  border-radius: 5px;
+  margin-top: 10px;
+  margin-bottom: 10px;
+  outline: none;
+}
+
+.upimethoddiv :nth-child(1){
+margin-bottom: 20px;
+}
+
+.upimethoddiv :nth-child(5){
+  padding: 15px 25px 15px 25px;
+  border: none;
+  border-radius: 5px;
+  font-weight: 500;
+  margin-left: 10px;
+  background-color: #e1edf4;
+  color: #003350;
+  cursor: pointer;
+}
+
+.upimethoddiv label{
+  font-size: 11px;
+}
+
+.upimethoddiv :nth-child(9){
+  border: none;
+  border-radius: 5px;
+  padding: 15px 78px 15px 78px;
+  background-color: rgb(223,70,34);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.imgsinpaysec{
+  margin-top: 10px;
+}
+
+.imgsinpaysec img{
+  margin-right: 10px;
+  height: 25px;
+}
+
+.debitcartmethod p{
+  font-size: 14px;
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.debitcartmethod {
+  margin-top: 20px;
+  margin-left: 25px;
+}
+
+.debitcartmethod label{
+  font-size: 12px;
+  color: rgb(105, 104, 104);
+}
+
+.cardholderandnumberdiv{
+  display: flex;
+  flex-direction: column;
+}
+
+.cardholderandnumberdiv :nth-child(1) {
+  border-bottom: none;
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.cardholderandnumberdiv :nth-child(2) {
+  border-bottom: 1px solid rgb(204, 204, 204);
+  border-bottom-left-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+
+.cardholderandnumberdiv input{
+  font-size: 14px;
+  width: 320px;
+  padding: 15px;
+  border-top: 1px solid rgb(204, 204, 204);
+  border-left: 1px solid rgb(204, 204, 204);
+  border-right: 1px solid rgb(204, 204, 204);
+  outline: none;
+}
+
+.mmyycvvdiv{
+  display: flex;
+  gap: 10px;
+  margin-top: 15px;
+  margin-bottom: 10px;
+}
+
+.mmyycvvdiv :nth-child(1){
+  padding: 15px;
+  border-radius: 5px;
+  border : 1px solid rgb(204, 204, 204);
+  outline: none;
+  background-color: white;
+}
+
+.mmyycvvdiv :nth-child(2){
+  padding: 15px;
+  border-radius: 5px;
+  border : 1px solid rgb(204, 204, 204);
+  outline: none;
+  background-color: white;
+
+
+}
+
+.mmyycvvdiv :nth-child(3){
+  width: 60px;
+  outline: none;
+  padding: 15px;
+  border-radius: 5px;
+  border : 1px solid rgb(204, 204, 204);
+}
+
+.paysecdebit{
+  margin-top: 15px;
+  width: 320px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 78px 15px 78px;
+  background-color: rgb(223,70,34);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+}
+
+.walletboxes div{
+  display: flex;
+  align-items: center;
+  position: relative;
+  height: 60px;
+  border-bottom: 1px solid rgb(199, 199, 199);
+  /* width: 129%; */
+}
+
+.walletboxes p {
+  position:absolute;
+  left: 230px;
+  font-weight: 500;
+}
+
+.walletboxes input {
+  height: 20px;
+  width: 20px;
+  margin-left: 15px;
+  margin-right: 15px;
+  cursor: pointer;
+}
+
+.walletpaybtn{
+  margin-top: 15px;
+  width: 320px;
+  border: none;
+  border-radius: 5px;
+  padding: 15px 78px 15px 78px;
+  background-color: rgb(223,70,34);
+  color: white;
+  font-weight: 500;
+  cursor: pointer;
+  margin-left: 30px;
+}
+
+.optModal{
+  border: 1px solid rgb(82,143,240);
+  background: rgb(246,250,255);
+  width: 50%;
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.secenterotpDiv{
+  position: relative;
+  display: flex;
+}
+
+.secenterotpDiv > p{
+  font-weight: 600;
+  font-size: 18px;
+}
+
+.secenterotpDiv > div {
+  display: flex;
+  position:absolute;
+  right: 0px;
+}
+
+.optModal{
+  padding: 30px ;
+}
+
+.secenterotpDiv > div > p{
+  font-weight: 500;
+  color: rgb(82,143,240);
+}
+
+.secenterotpDiv + p {
+  margin-top: 15px;
+  color: rgb(97, 97, 97);
+  font-size: 17px;
+  line-height: 28px;
+}
+
+.cancelresent{
+  display: flex;
+  gap: 10px;
+  color: rgb(82,143,240);
+  font-size: 17px;
+}
+
+.cancelresent > p{
+  cursor: pointer;
+}
+
+.inputotp{
+  display: flex;
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+
+.inputotp input {
+  padding: 12px;
+  font-size: 22px;
+  outline: none;
+}
+
+.inputotp button {
+  padding: 12px 50px 12px 50px;
+  border: none;
+  font-size: 17px;
+  background-color: rgb(82,143,240);
+  color: white;
+  cursor: pointer;
+}
+
+.offmodal{
+  display: none;
+}
+
+.backgorundBlue{
+  background-color: rgb(248, 248, 248);
+    height: 100%;
+    filter: brightness(35%);
+}
+
+.loadingSec{
+  z-index: 5;
+  position: fixed;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.loadingOn{
+  z-index: 5;
+  display: none;
+}
+
+.mainTopDivNavSucc{
+  display: flex;
+  gap: 20px;
+}
+
+.mainTopDivNavSucc > div{
+  display: flex;
+  align-items: center;
+  gap: 3px;
+}
+
+.mainTopDivNavSucc p {
+  font-size: 13px;
+}
+
+.successNav{
+  width: 93%;
+  margin: auto;
+  background-color: rgb(245, 243, 243);
+  padding : 10px 0px 10px 30px;
+  margin-top: 4vh;
+}
+
+.successmsg{
+  text-align: center;
+  margin: auto;
+  margin-top: 3%;
+}
+
+.successmsg :nth-child(2) {
+  font-size: 30px;
+  font-weight: 500;
+}
+
+.orderandpaydetailssucc{
+  display: grid;
+  grid-template-columns: 2.2fr 1.12fr;
+  gap: 35px;
+  margin-top: 3%;
+}
+
+.orderDetailsSucc{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  margin-left: 5%;
+}
+
+.orderDetails{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+
+.orderDetailsSucc{
+  border: 1px solid rgb(209, 206, 206);
+  border-radius: 5px;
+  font-weight: 500;
+  font-size: 14px;
+  color: rgb(70, 69, 69);
+}
+
+.orderDetails{
+  border-top:  1px solid rgb(209, 206, 206);
+  border-right: 1px solid rgb(209, 206, 206);
+  padding: 12px;
+}
+
+.addresssuccessp{
+  border-top:  1px solid rgb(209, 206, 206);
+  padding: 12px;
+}
+
+.shippingaddsuch{
+  padding: 10px;
+}
+
+.ordersucessh{
+  padding: 10px;
+}
+
+.paymentDetailsDiv{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  line-height: 30px;
+  font-size: 15px;
+
+}
+
+.paymentrighthsucc{
+  font-weight: 500;
+  margin-bottom: 10px;
+}
+
+.leftpaysucc{
+  text-align: left;
+}
+
+.rightpaysucc{
+  text-align: right;
+}
+
+.mainpaymentDetdicsucc{
+  border: 1px solid rgb(209, 206, 206);
+  border-radius: 5px;
+  margin-right: 10%;
+  padding: 12px;
+}
+
+.infoimposucc{
+  background-color: rgb(243, 243, 243);
+  margin: 10px;
+  padding: 10px;
+}
+
+@media screen and (max-width:750px) {
+
+  .orderDetailsSucc{
+    display: none;
+  }
+
+  .mainpaymentDetdicsucc{
+    margin-right: 0;
+    position: absolute;
+    width: 90%;
+    left: 50%;
+    transform: translate(-50%);
+    margin-bottom: 3%;
+  }
+
+  .mainTopDivNavSucc p{
+    font-size: 10px;
+  }
+
+
+  .addressdivpaypage{
+    margin-top: -10px;
+  }
+
+  .maxScreenNav{
+    display: none;
+  }
+
+  .navforsmaller{
+    display: block;
+  }
+
+  .mainContainer{
+    display: flex;
+    flex-direction:column-reverse;
+  }
+
+  .tablist{
+    display: none;
+  }
+
+  .simpl{
+    padding: 0px 0px 20px 0px;
+  }
+
+  .rightsidepaymentdet{
+    width: 90%;
+    margin: auto;
+  }
+
+  .mainpaymentbox{
+    padding: 0;
+    margin: auto;
+    width: 90%;
+
+  }
+
+  .choosePaymentHead{
+    display: none;
+  }
+
+.seclinesimpl :nth-child(3){
+  display: none;
+}
+
+.threelinesimpl :nth-child(2){
+  display: none;
+}
+
+
+.optModal{
+  border: 1px solid rgb(82,143,240);
+  background: rgb(246,250,255);
+  width: 95%;
+  position:fixed;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.secenterotpDiv + p {
+  font-size: 14px;
+}
+
+
+.inputotp > input {
+  width: 60%;
+}
+
+}

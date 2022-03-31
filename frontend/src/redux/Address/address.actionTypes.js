@@ -1,0 +1,4 @@
+export const ADD_ADDRESS = "ADD_ADDRESS"
+export const REMOVE_ADDRESS = "REMOVE_ADDRESS"
+export const SELECT_ADDRESS = "SELECT_ADDRESS"
+export const UPDATE_OTP = "UPDATE_OTP"

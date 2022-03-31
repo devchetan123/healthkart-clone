@@ -1,0 +1,412 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+ 
+}
+
+.boxofaddress{
+    width: 92%;
+    margin: auto;
+   display: grid;
+   grid-template-columns: 1fr 1fr;
+   justify-content: center;
+   align-items: center;
+   align-content: center;
+   align-self: center;
+   flex-wrap: wrap;
+}
+
+.navMain {
+
+    display: flex;
+    box-shadow: 2.5px 2.5px 2.5px rgb(211, 211, 211);
+    background-color: white;
+  }
+  
+  .navMain > img {
+    margin-left: 35px;
+  }
+  
+  .process {
+    margin-left: 117px;
+    display: flex;
+    align-items: center;
+  }
+  
+  .hrLine {
+    border-top: 1px solid black;
+    border-bottom: 1px solid white;
+    border-left: 1px solid white;
+    border-right: 1px solid white;
+    background-color: white;
+    width: 10vw;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+  
+  .process p {
+    font-family: Roboto, sans-serif;
+    font-size: 12px;
+    color: rgb(77, 74, 74);
+  }
+  
+  .process > img {
+    margin-right: 2.5px;
+  }
+
+  .background{
+    background-color: rgb(248, 248, 248);
+    height: 100vh;
+    font-family: "Roboto", sans-serif;
+  }
+
+  .blueback{
+    background-color: rgb(248, 248, 248);
+    height: 100vh;
+    filter: brightness(42%);
+    font-family: "Roboto", sans-serif;
+  }
+
+  .mainDivAddrs{
+      background-color: white;
+      margin: auto;
+      width: 93%;
+      margin-top: 35px;
+  box-shadow: 1px 1px 2px 2px rgb(224, 223, 223);
+
+  }
+
+  .firstaddressline{
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      padding: 15px 20px 15px 20px;
+      align-items: center;
+      border-bottom: 1px solid rgb(223, 221, 221);
+  }
+
+  .firstaddressline :nth-child(1){
+      text-align: left;
+      font-size: 18px;
+      font-weight: 500;
+  }
+
+  .firstaddressline :nth-child(2){
+    text-align: right;
+    color: rgb(0,188,179);
+    font-weight: 500;
+    font-size: 14px;
+    cursor: pointer;
+}
+
+.emailUpdateadd{
+    display: flex;
+}
+
+.emailupdateDiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border-bottom: 1px solid rgb(223, 221, 221);
+    align-items: center;
+    padding: 20px 20px 20px 20px;
+}
+
+.emailupdateDiv :nth-child(1){
+  text-align: left;
+  font-size: 13px;
+  color: grey;
+}
+
+
+.emailupdateDiv :nth-child(2){
+    justify-content: right;
+    gap: 12px;
+    align-items: center;
+}
+
+.emailUpdateadd p{
+    font-size: 14px;
+}
+
+.emailUpdateadd button {
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color: transparent;
+    color: rgb(6, 170, 162);
+    font-weight: 500;
+    padding: 5px;
+    cursor: pointer;
+}
+
+.modelshow{
+    width: 440px;
+    position:absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+}
+
+.modelhide{
+    display: none;
+}
+
+.delandeditbtns{
+    display: flex;
+    flex-direction: column;
+    gap: 25px;
+    position: absolute;
+    right: 10px;
+}
+
+.delandeditbtns button{
+    border: 0.7px solid rgb(168, 165, 165);
+    border-radius: 3px;
+    background-color: transparent;
+    padding: 4px 4px 3px 4px;
+    cursor: pointer;
+}
+
+.addressMainBox{
+    border-top-right-radius: 7px;
+    border-top-left-radius: 7px;
+    position: relative;
+    display: flex;
+     width: 500px;
+    padding: 40px 20px 45px 20px;
+    box-shadow: 1.3px 1.2px 4.5px 1.2px rgb(211, 209, 209);
+
+}
+.addressTopMainBox{
+    padding-bottom: 4%;
+    margin: 20px;
+}
+
+.buttonDelhere{
+    border-bottom-right-radius: 7px;
+    border-bottom-left-radius: 7px;
+    width: 500px;
+    border: none;
+    background-color: rgb(35,151,150);
+    color: white;
+    padding: 15px;
+    font-size: 13px;
+    cursor: pointer;
+}
+
+.addressbox :nth-child(1){
+    font-weight: 500;
+    font-size: 15px;
+    margin-bottom: 10px;
+}
+
+.addressbox :nth-child(2){
+    font-size: 12.5px;
+    color: rgb(95, 93, 93);
+}
+
+.addressbox :nth-child(3){
+    font-size: 12.5px;
+    color: rgb(95, 93, 93);
+}
+
+
+.namein :after{
+    content: " *";
+    color: red;
+}
+
+.namein{
+    width: 100%;
+}
+
+ .mobilein :after{
+    content: " *";
+    color: red;
+}
+
+.twoNumDiv{
+    display: flex;
+gap: 25px;
+
+}
+
+.mobilein{
+    width: 100%;
+}
+
+.altmobilein{
+   width: 100%;
+} 
+
+.addressin{
+    width: 100%;
+}
+
+.addressin :after{
+    content: " *";
+    color: red;
+} 
+
+.landpincodediv{
+display: flex;
+gap: 25px;
+}
+
+.getmylcoation{
+    display: flex;
+    align-items: center;
+    margin-top: 25px;
+    margin-bottom: 10px;
+    color: rgb(0,188,179);
+    font-weight: 500;
+    font-size: 15px;
+}
+
+.landin{
+    width: 100%;
+}
+
+.pincodein :after{
+    content: " *";
+    color: red;
+}
+
+.pincodein{
+    width: 100%;
+
+}
+
+.addaddressdiv{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    position: relative;
+    align-items: center;
+    border-bottom: 1px solid rgb(202, 202, 202);
+    padding: 17px 0px 17px 35px;
+}
+
+.addaddressdiv :nth-child(1){
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+.addaddressdiv :nth-child(2){
+    position:absolute;
+    right :35px
+}
+
+.mainAddressDix{
+    padding: 10px 35px 35px 35px;
+}
+
+.savedelbtn{
+    margin-top: 20px;
+    background-color: rgb(35,151,150) ;
+    color: white;
+    width: 100%;
+    border: none;
+    padding: 13px;
+    font-size: 17px;
+    font-weight: 500;
+    cursor: pointer;
+    border-radius: 7px;
+}
+
+.navforsmaller{
+    display: none;
+  }
+
+  /* smaller */
+
+  .mobileprocess{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-top: 60px;
+  }
+
+  .mobileprocess img{
+    margin-right : 5px;
+    height: 18px;
+  }
+
+  .mobileprocess p{
+   font-size: 13px;
+   color: rgb(83, 82, 82);
+  }
+
+  .hrLine{
+    width: 80px;
+    background-color: rgb(59, 59, 59);
+  }
+
+  .navfirstLine {
+    display: flex;
+    position: relative;
+  }
+  
+  .cartleftNav {
+    position: absolute;
+    left: 15px;
+    top: 15px;
+    display: flex;
+    gap: 8px;
+    align-items: center;
+    font-size: 20px;
+    font-weight: 500;
+  }
+
+  .updatemsgsmall{
+      display: none;
+  }
+
+@media screen and (max-width: 750px) {
+
+    .emailupdateDiv :nth-child(1){
+        display: none;
+    }
+
+    .updatemsgsmall{
+        margin-top: 10px;
+        margin-left: 20px;
+        font-size: 14px;
+        color: gray;
+    }
+
+    .navMain {
+        display: none;
+    }
+
+    .navforsmaller{
+        display: block;
+    }
+
+    .boxofaddress{
+        display: flex;
+        flex-direction: column;
+    }
+
+    .addressMainBox{
+        width: 350px
+    }
+
+    .buttonDelhere{
+        width: 350px;
+    }
+
+    .modelshow{
+        width: 100%;
+        position:absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        background-color: white;
+        
+    }
+}
