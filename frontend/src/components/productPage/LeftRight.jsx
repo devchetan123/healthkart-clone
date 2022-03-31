@@ -1,0 +1,35 @@
+import React,{useState} from 'react'
+import { useEffect } from 'react'
+
+import { Left } from './Left'
+import styles from '../../css/productsPage/leftright.module.css'
+
+export const LeftRight = () => {
+    const API_URL = "https://json-practice.herokuapp.com/product"
+    const [items,setItems] = useState([])
+    useEffect(() =>{
+        const fetchItems = async() => {
+            try{
+                const response = await fetch(API_URL)
+                if(!response.ok) throw Error ('Data not found')
+                const listItems = await response.json()
+                setItems(listItems)
+            }
+            catch(err){
+                console.log(err)
+            }
+        }
+        fetchItems()
+    },[])
+  return (
+    <>
+    
+        <div className={styles.warpperleftright}>
+        <Left items = {items} setItems={setItems}/>
+        
+        </div>
+       
+        
+    </>
+  )
+}
