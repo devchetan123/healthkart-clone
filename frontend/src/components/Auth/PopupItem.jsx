@@ -58,7 +58,7 @@ export default function PopupItem() {
   };
 
   return (
-    <Box sx={{  width: 550 }}>
+    <Box >
       <div>
         <div className={Styles.login}>
         <div className={Styles.loginLeft} >
