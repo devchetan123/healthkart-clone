@@ -52,12 +52,11 @@ export const PhoneSignUp = () => {
         <form onSubmit={getOtp} style={{display:!flag?"block":"none"}} >
           <div  controlId="formBasicPhoneNumber">
             <PhoneInput
-            style={{height:"50px"}}
-            className={Styles.phoneInput}
-            defaultCountry='IN'
-            value={number}
-            onChange={setNumber}
-            placeholder="Phone Number"
+              className={Styles.phoneInput}
+              defaultCountry='IN'
+              value={number}
+              onChange={setNumber}
+              placeholder="Phone Number"
             />
             
             <div id="recaptcha-container"/>

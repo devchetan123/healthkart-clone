@@ -91,7 +91,7 @@ const AccountDrop = () => {
                 <Link to="/profile" ><h5 style={{marginLeft:"16%"}}>Account</h5></Link>
                 <div style={{borderRight:"1px solid grey"}}>
                 <MenuItem style={{display:"flex",gap:"5px"}} > <img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-orders.svg" alt="" /> <span>Order</span></MenuItem>
-                <MenuItem style={{display:"flex",gap:"5px"}}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-wishlist.svg" alt="" /> <span>Wishlist</span></MenuItem>
+                <Link to="/wishlist" ><MenuItem style={{display:"flex",gap:"5px"}}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/my-wishlist.svg" alt="" /> <span>Wishlist</span></MenuItem></Link>
                 <MenuItem style={{display:"flex",gap:"5px"}}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/header/loyalty-rewards.svg" alt="" /><span> Rewards</span></MenuItem>
                 </div>
             </div>

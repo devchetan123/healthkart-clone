@@ -23,16 +23,15 @@
   margin-left: 20px;
 }
 
-.searchDiv > img{
+.searchDiv > Button{
   position: absolute;
   z-index: 1;
-  left: 5px;
 }
 
 .searchDiv input {
   position: absolute;
   width: 34vw;
-  padding: 9px 10px 9px 35px;
+  padding: 9px 10px 9px 55px;
   color: grey;
   border-radius: 3px;
   border: 1px solid gray;

@@ -1,0 +1,10 @@
+.contentWishlist{
+    display: flex;
+    gap: 10px;
+}
+.contentWishlist>div:nth-child(2)>button{
+    background-color: white;
+    border: 0px;
+    display: flex;
+    gap: 5px;
+}

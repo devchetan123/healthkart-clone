@@ -11,6 +11,8 @@ import {LeftRight} from "../components/productPage/LeftRight"
 import { LandingPage } from "../components/LandingPage/LandingPage"
 import Profile from '../components/ProfileStructure/Profile'
 import { ProfileStructure } from '../components/ProfileStructure/ProfileStructure'
+import SearchResult from '../components/SearchResult/SearchResult'
+import { Wishlist } from '../components/Wishlist/Wishlist'
 
 export  const Routers = () => {
   return (
@@ -25,6 +27,7 @@ export  const Routers = () => {
           <Route path='/payment' element={<PaymentPage/>}/>
           <Route path='/success' element={<PaymentSuccess/>}/>
           <Route path='/profile' element={<ProfileStructure/>}/>
+          <Route path='/wishlist' element={<Wishlist/>} />
         </Routes>
       </UserAuthContextProvider>
         
