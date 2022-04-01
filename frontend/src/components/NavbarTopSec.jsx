@@ -1,10 +1,13 @@
-import React from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import style from "../css/navbartopsec.module.css"
+import CustomerDrop from './CustomerDrop'
+import AccountDrop from './Dropdowns/AccountDrop'
 
 function NavbarTopSec() {
 
+  
   const cart = useSelector((state) => state.cart.cart)
   const navigate = useNavigate();
 
@@ -20,13 +23,15 @@ function NavbarTopSec() {
             <p>Loyalty Rewards</p>
             <hr />
             <div>
-                <p>Customer Support</p>
+                <CustomerDrop/>
                 <img className={style.arrownav} src="https://i.ibb.co/D5gvVwF/icons8-expand-arrow-50-1.png" alt=""  height={"15px"}  />
             </div>
             <hr />
-            <div>
+            <div >
                 <img src="https://i.ibb.co/M2B90Lj/icons8-user-64.png" alt=""  height={"18px"}  />
-                <p>My Account & Orders</p>
+                
+                    <AccountDrop/>
+                
                 <img className={style.arrownav} src="https://i.ibb.co/D5gvVwF/icons8-expand-arrow-50-1.png" alt="" height={"15px"} />
             </div>
             <hr />

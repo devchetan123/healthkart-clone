@@ -1,4 +1,4 @@
-import React from "react"
+import React, { useState } from "react"
 import PropTypes from 'prop-types';
 import Button from '@mui/material/Button';
 import { styled } from '@mui/material/styles';
@@ -52,6 +52,7 @@ BootstrapDialogTitle.propTypes = {
 
 export default function LoginSIgnup() {
   const [open, setOpen] = React.useState(false);
+ 
 
   const handleClickOpen = () => {
     setOpen(true);
@@ -62,8 +63,11 @@ export default function LoginSIgnup() {
 
   return (
     <div>
-      <Button variant="outlined" onClick={handleClickOpen}>
-        Login/Signup
+      <Button style={{width:"240px",backgroundColor:"#04a1a1",margin:"5px",color:"white",fontSize:"10px"}} onClick={handleClickOpen}>
+        Login
+      </Button><br />
+      <Button style={{width:"240px",border:"1px solid grey",margin:"0px 5px",color:"black",fontSize:"10px"}} onClick={handleClickOpen}>
+        New user? / Signup
       </Button>
       <BootstrapDialog
         onClose={handleClose}

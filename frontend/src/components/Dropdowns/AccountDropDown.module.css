@@ -1,0 +1,13 @@
+.drops{
+    margin-top: 50px;
+}
+.dropContentCommon{
+    display: flex;
+    gap: 5%;
+    margin:0px 10px;
+}
+.dropContentCommon>div>h5{ 
+    margin-left: 10%;
+    text-align: left;
+    color: rgb(3, 189, 189);
+}
