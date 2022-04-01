@@ -82,6 +82,7 @@
       border-radius: 2px;
       width:35%;
       margin-left:20%;
+      cursor: pointer;
 
   }
   .star{
@@ -111,6 +112,7 @@
   }
  .title{
      font-weight: 550;
+     cursor: pointer;
  }
  .sorting{
      text-align: left;
