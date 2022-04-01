@@ -84,10 +84,10 @@ export const Navbar = () => {
                                               <li><a href="/#">ZMA</a></li>
                                               </ul>
                                        </div>
-                                       <div className={styles.listItem}>
+                                       {/* <div className={styles.listItem}>
                                       
                                       <img src = "https://static1.hkrtcdn.com/hknext/static/media/common/header/man-2.svg" alt="img"/>
-                                       </div>
+                                       </div> */}
                                     </div>
                                 </li>
                                 <li className={styles.menuItemHasChildren}>
