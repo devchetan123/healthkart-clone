@@ -2,7 +2,6 @@ import React, { useEffect, useState } from 'react'
 import NavbarTopSec from "../components/NavbarTopSec"
 import {Navbar} from "../components/Navbar"
 import style from "../css/wishlist.module.css"
-import { useSelector } from 'react-redux'
 import Wishlistitem from "../components/Wishlistitem"
 import { useNavigate } from 'react-router-dom'
 import { Footer } from "../components/Footer/Footer"
