@@ -37,6 +37,8 @@
     margin: 10% 0;
     text-align: left;
     line-height: 1.5;
+    font-size: 14px;
+    color: #212121;
 }
 .circle{
     height:12px;
@@ -50,6 +52,8 @@
   border:1px solid #aaa;
   line-height: 1.5;
   width:80%;
+  font-size: 14px;
+  color: #212121;
 }
 
 @media screen and (max-width:750px){

@@ -1,17 +1,20 @@
 import React from 'react'
 import styles from '../css/nav.module.css'
-import LoginSIgnup from './Auth/LoginSIgnup'
+
+
+
 
 
 
 export const Navbar = () => {
+    
   return (
     
     <div>
         {/* header strats here */}
         <header className={styles.header}>
             <div className={styles.container}>
-                
+            
                 <div className={[styles.row, styles.vCenter].join(' ')}>
                     {/* <div className={[styles.header-item, styles.item-left].join(' ')}>
 
@@ -252,7 +255,7 @@ export const Navbar = () => {
                     </div>
 
                 </div>
-
+                
             </div>
         </header>
         {/* header ends here */}

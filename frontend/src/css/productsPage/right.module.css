@@ -23,7 +23,7 @@
     height:80%;
     width:80%;
     padding-left: 30%;
-    margin-bottom: 16%;
+    margin-bottom: 14%;
 }
 .discount{
     background-color: #e35a5a;
@@ -47,6 +47,10 @@
 
 .toptext{
     text-align: left;
+    font-size: 14px;
+    color: #212a2b;
+    font-weight: 400;
+    line-height: 20px;
 }
 
 .iconContainer img:nth-child(2) {
@@ -113,6 +117,8 @@
  .title{
      font-weight: 550;
      cursor: pointer;
+     color: #212a2b;
+     font-size: 16px;
  }
  .sorting{
      text-align: left;
