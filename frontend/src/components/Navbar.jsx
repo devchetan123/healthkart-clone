@@ -1,5 +1,6 @@
 import React from 'react'
 import styles from '../css/nav.module.css'
+import LoginSIgnup from './Auth/LoginSIgnup'
 
 
 
