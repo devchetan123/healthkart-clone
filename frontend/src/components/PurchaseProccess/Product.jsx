@@ -2,6 +2,7 @@ import React, { useEffect, useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { add_qty, remove_cart, remove_qty } from '../../redux/Cart/cart.actions';
 import style from "../../css/product.module.css"
+import { useNavigate } from "react-router-dom";
 import { FiPlus } from "react-icons/fi"
 import { AiOutlineMinus } from "react-icons/ai"
 
@@ -12,6 +13,7 @@ function Product({ product }) {
     const [totalPrice, setTotalPrice] = useState(0)
     const [discount, setDiscount] = useState(0)
     const [hkcash, sethkcash] = useState(0)
+    const navigate = useNavigate()
 
     const calculateDiscount = (price) => {
       let percent = price  * (25/100)
@@ -39,7 +41,7 @@ function Product({ product }) {
         </div>
 
         <div className={style.middlesection} >
-          <h5 className={style.phead} >{product.title}</h5>
+          <h5 onClick={() => navigate(`/products/${product.id}`)} className={style.phead} >{product.title}</h5>
           <div className={style.priceLine} >
             <img src="https://i.ibb.co/1mzp32d/premium-logo-new.png" height={"22px"} alt="" />
             <h5 className={style.price} >₹{product.price}</h5>

@@ -68,7 +68,7 @@ export const Right = ({items,setItems}) => {
                                   
                                   <div>
                                       
-                                 <img src={item.image} alt = "Product" className={styles.prodimg}/>
+                                 <img src={item.img_url} alt = "Product" className={styles.prodimg}/>
                                  </div>
                                  <p className={styles.title}>{item.title}</p>
                                 {/* <span><Rating name="size-medium" defaultValue={4} className={styles.rating}/>
@@ -76,8 +76,8 @@ export const Right = ({items,setItems}) => {
                                 <p className={styles.star}><FaStar/><FaStar/><FaStar/><FaStar/><FaStarHalfAlt/><span style={{color:"black"}}>{item.rating}</span></p>
                                  
                                  <div>
-                                 <p><FaRupeeSign/><span className={styles.pricebold}>{item.price}</span>&nbsp;&nbsp;
-                                 <span className={styles.pricelinethrough}><FaRupeeSign/>{`${item.price+2000}`}</span>
+                                 <p><FaRupeeSign/><span className={styles.pricebold}>{item.originalPrice}</span>&nbsp;&nbsp;
+                                 <span className={styles.pricelinethrough}><FaRupeeSign/>{`${+item.originalPrice+2000}`}</span>
                                  <span>
                                      <button className={styles.quickbuy}>
                                          <img src="	https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder-buy.svg" alt="flash"/>
@@ -87,7 +87,7 @@ export const Right = ({items,setItems}) => {
                                  </p>
                                  <button className={styles.premiumprice}>
                                      <img src="https://static1.hkrtcdn.com/hknext/static/media/loyalty/premium-logo-new.svg" alt="crown" className={styles.crownimg}/>
-                                     Premium Member Price: <FaRupeeSign/>{item.price-400}
+                                     Premium Member Price: <FaRupeeSign/>{+item.originalPrice-400}
                                  </button>
                                 
                                  </div>

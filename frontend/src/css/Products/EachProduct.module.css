@@ -44,9 +44,9 @@
     height: 50px;
     width: 50px;
 }
-h3,p,h5{
+/* h3,p,h5{
     margin: 2%;
-}
+} */
 .byProduct>span{
     color: rgb(2, 208, 245);
     font-weight: 700;

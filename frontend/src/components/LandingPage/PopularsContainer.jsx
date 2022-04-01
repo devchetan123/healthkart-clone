@@ -14,11 +14,11 @@ export const PopularsContainer = ({items, tag}) => {
     //     console.log({items})
     // })
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/popularsportsnut")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.popularInSportsNutrition);
-            setVal(res.popularInSportsNutrition)
+            console.log(res);
+            setVal(res)
         })
         .catch((err)=>console.log(err))
     }, [])  

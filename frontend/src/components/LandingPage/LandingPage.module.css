@@ -120,9 +120,10 @@
     text-align: left;
     height: 48px;
     margin: 20px 0px 5px;
+    cursor: pointer;
 }
 .rating{
-    font-size: 8px;
+    font-size: 9px;
     color: #25292b;
     margin: 0px;
 }
@@ -152,6 +153,7 @@
     border: none;
     width: 70px;
     border-radius: 2px;
+    cursor: pointer;
 }
 .priceAndAdd{
     display: flex;
@@ -246,4 +248,10 @@
     gap: 10px;
     display: flex;
     flex-wrap: nowrap;
+}
+
+.ratingstardiv{
+    display: flex;
+    align-items: center;
+    margin-bottom: -8px;
 }

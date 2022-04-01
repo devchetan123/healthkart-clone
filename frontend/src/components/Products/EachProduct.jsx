@@ -14,15 +14,17 @@ import DoneIcon from '@mui/icons-material/Done';
 import { Reviews } from "./Reviews";
 import NavbarTopSec from "../NavbarTopSec";
 import { Navbar } from "../Navbar";
+import { useDispatch } from "react-redux";
+import { add_cart } from "../../redux/Cart/cart.actions";
 
 export default function EachProduct() {
   const [user, setUser] = useState({});
-  const [count,setCount] = useState(0)
+  const [count,setCount] = useState(1)
   const pharms = useParams();
   useEffect(() => {
     if (pharms.id) {
       fetch(
-        `https://json-practice.herokuapp.com/product/${pharms.id}`
+        `https://healthkartdatabase.herokuapp.com/products/${pharms.id}`
       )
         .then((r) => r.json())
         .then((data) => setUser(data));
@@ -44,21 +46,37 @@ export default function EachProduct() {
   return axios(con)
   }
 
+
+  const dispatch = useDispatch();
+
+    const addCartFunc = (x) => {
+      const obj = {
+        id : x._id,
+        title : x.title,
+        price : x.originalPrice,
+        img : x.img_url,
+        qty : count,
+        initPrice : x.originalPrice
+      }
+ 
+      dispatch(add_cart(obj))
+    }
+
   return (
     <div>
       <NavbarTopSec />
       <Navbar/>
       <div className={Styles.container} >
       <div className={Styles.containerImage} >
-        <img src={user.image} alt=""/>
+        <img src={user.img_url} alt=""/>
         <div className={Styles.imgDisp} >
-        <img src={user.image} alt="" />
-        <img src={user.image} alt="" />
-        <img src={user.image} alt="" />
-        <img src={user.image} alt="" />
+        <img src={user.img_url} alt="" />
+        <img src={user.img_url} alt="" />
+        <img src={user.img_url} alt="" />
+        <img src={user.img_url} alt="" />
         </div>
       <button className={Styles.watchlist} onClick={()=>{
-        handleWatchList(user.id,user.title,user.image)
+        handleWatchList(user._id,user.title,user.img_url)
       }}
       >
         <FavoriteBorderIcon className={Styles.watchlistLogo} />
@@ -72,8 +90,8 @@ export default function EachProduct() {
             <h5 className={Styles.rate}>{user.rating} <span><StarIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)"}} /></span> </h5>
             <button className={Styles.offer} >{`${user.discount}% OFF`}</button>
             <div className={Styles.price} >
-                <h2>{`₹${user.price}`}</h2>
-                <p>₹{Math.floor(user.price+(user.price*(user.discount/100)))}</p>
+                <h2>{`₹${user.originalPrice}`}</h2>
+                <p>₹{Math.floor(user.originalPrice+(user.originalPrice*(user.discount/100)))}</p>
                 <p>+ <span><CircleIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)",marginTop:"10px",marginLeft:"2px",marginRight:"2px"}} /></span>Get HK Cash +₹175</p>
             </div>
             <div className={Styles.offers} >
@@ -86,11 +104,15 @@ export default function EachProduct() {
             </div>
             <div className={Styles.buy}>
               <div className={Styles.counter} >
-                <button onClick={()=>setCount(count-1)} >-</button>
+                <button  onClick={()=> {
+                  if(count > 1){
+                    setCount(count-1)
+                  }
+                }} >-</button>
                 <p>{count}</p>
                 <button onClick={()=>setCount(count+1)} >+</button>  
               </div>  
-              <button className={Styles.cartAdd} ><ShoppingCartIcon className={Styles.cont} /> ADD TO CART</button>
+              <button className={Styles.cartAdd} onClick={() => addCartFunc(user)} ><ShoppingCartIcon className={Styles.cont} /> ADD TO CART</button>
               <button className={Styles.directBuy}><BoltIcon className={Styles.cont1} /> QUICK BUY</button>
             </div>  
             <div className={Styles.weight} >
