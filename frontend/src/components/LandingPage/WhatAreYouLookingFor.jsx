@@ -14,7 +14,7 @@ export const WhatAreYouLookingFor = () => {
     },[])
   return (
     <div>
-        <h3>Hi, What are you looking for?</h3>
+        <h3 style={{maxWidth: "85%", margin: "auto", paddingBottom: "10px"}}>Hi, What are you looking for?</h3>
         <div className={styles.titleImagesBox}>
             {images.map((image)=>(
                 <div key={image.id}>
