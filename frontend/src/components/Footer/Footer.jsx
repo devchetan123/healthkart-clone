@@ -7,54 +7,64 @@ export const Footer = () => {
         <div className={styles.footerWrapper}>
             <div className= {styles.boxes}>
                 <h5>HEALTHKART</h5>
-                <p>About Us</p>
-                <p>Contact Us</p>
-                <p>Refer & Earn</p>
-                <p>Loyality Program</p>
-                <p>HK Consult</p>
-                <p>Blogs, Videos & More</p>
-                <p>Brand Directory</p>
-                <p>Authenticity Guaranteed</p>
-                <p>Careers</p>
+                <div>
+                    <p>About Us</p>
+                    <p>Contact Us</p>
+                    <p>Refer & Earn</p>
+                    <p>Loyality Program</p>
+                    <p>HK Consult</p>
+                    <p>Blogs, Videos & More</p>
+                    <p>Brand Directory</p>
+                    <p>Authenticity Guaranteed</p>
+                    <p>Careers</p>
+                </div>
             </div>
             <div className= {styles.boxes}>
                 <h5>BRANDS</h5>
-                <p>MuscleBlaze</p>
-                <p>TrueBasics</p>
-                <p>JustHer</p>
-                <p>Nouriza</p>
-                <p>Gritzo</p>
-                <p>bGREEN</p>
+                <div>
+                    <p>MuscleBlaze</p>
+                    <p>TrueBasics</p>
+                    <p>JustHer</p>
+                    <p>Nouriza</p>
+                    <p>Gritzo</p>
+                    <p>bGREEN</p>
+                </div>
             </div>
             <div className= {styles.boxes}>
                 <h5>HEALTH & FITNESS</h5>
-                <p>Bodybuilding</p>
-                <p>Weight Loss</p>
-                <p>Hair & Skin Care</p>
-                <p>Sports Nutrition</p>
-                <p>Vitamins & Supplements</p>
-                <p>Ayurveda & Herbs</p>
-                <p>Health Food & Drinks</p>
-                <p>Fitness</p>
-                <p>Wellness</p>
-                <p>Consult Plans</p>
+                <div>
+                    <p>Bodybuilding</p>
+                    <p>Weight Loss</p>
+                    <p>Hair & Skin Care</p>
+                    <p>Sports Nutrition</p>
+                    <p>Vitamins & Supplements</p>
+                    <p>Ayurveda & Herbs</p>
+                    <p>Health Food & Drinks</p>
+                    <p>Fitness</p>
+                    <p>Wellness</p>
+                    <p>Consult Plans</p>
+                </div>
             </div>
             <div className= {styles.boxes}>
                 <h5>POLICIES</h5>
-                <p>Terms & Conditions</p>
-                <p>Delivery Policy</p>
-                <p>Privacy Policy</p>
-                <p>Returns Policy</p>
+                <div>
+                    <p>Terms & Conditions</p>
+                    <p>Delivery Policy</p>
+                    <p>Privacy Policy</p>
+                    <p>Returns Policy</p>
+                </div>
             </div>
             <div className= {styles.boxes}>
                 <h5>QUICK LINKS</h5>
-                <p>My Account</p>
-                <p>Track Your Order</p>
-                <p>Store Locator</p>
-                <p>HK Cash</p>
-                <p>HK Coupons</p>
-                <p>FAQs</p>
-                <p>Sell On Healthkart</p>
+                <div>
+                    <p>My Account</p>
+                    <p>Track Your Order</p>
+                    <p>Store Locator</p>
+                    <p>HK Cash</p>
+                    <p>HK Coupons</p>
+                    <p>FAQs</p>
+                    <p>Sell On Healthkart</p>
+                </div>
             </div>
             <div className={styles.lastBox}>
                 <h5>ABOUT HEALTHKART</h5>

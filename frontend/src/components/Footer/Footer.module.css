@@ -1,6 +1,8 @@
 .footerWrapper{
     display: flex;
     text-align: left;
+    justify-content: space-between;
+    flex-wrap: wrap;
     gap: 2%;
     font-size: 14px;
     padding: 50px 15px;
@@ -13,9 +15,10 @@
     margin: 0px 0px 7px;
     font-weight: 700;
 }
-.boxes > p, .lastBox > p{
+.boxes > div > p, .lastBox > p{
     color: #4E4E4E;
     margin-top: 0px;
+    font-size: 12px;
 }
 .lastBox{
     max-width: 28%;
@@ -43,6 +46,7 @@
     color: #fff;
     background: #198B86;
     border: none;
+    padding: 8px 4px;
     border-radius: 6px;
 }
 .disclaimer{
@@ -76,4 +80,42 @@
 }
 .copyright > div >img{
     max-width: 30%;
+}
+@media screen and (max-width: 750px){
+    .footerWrapper{
+        display: flex;
+        text-align: left;
+        justify-content: flex-start;
+        flex-wrap: wrap;
+        gap: 20%;
+        font-size: 14px;
+        padding: 50px 15px;
+    }
+    .boxes{
+        max-width: 100%;
+    }
+    .lastBox > div > button{
+        max-width: 100%;
+    }
+    .lastBox > div{
+        flex-wrap: wrap;
+    }
+}
+@media screen and (max-width: 450px) {
+    .disclaimer{
+        flex-wrap: wrap;
+        margin-bottom: 30px;
+    }
+    .disclaimer > img{
+        max-width: 20%;
+        margin-right: 8%;
+        margin-bottom: 4%;
+    }
+    .disclaimer> img:nth-child(1){
+        margin-left: 8%;
+    }
+    .copyright > div{
+        flex-wrap: wrap;
+        gap: 5%;
+    }
 }
