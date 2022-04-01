@@ -46,10 +46,14 @@
     padding: 0px 5px;
 }
 .benefitsWrapper{
-    min-height: 57.9%;
-    background-color: #aedfdf;
+    display: none;
+    min-height: 50%;
+    background-color: #F6FFFF;
+    opacity: 0.85;
     border-top-left-radius: 9px;
     border-top-right-radius: 9px;
+    padding: 6px 15px 9px 15px;
+    min-width: 84%;
 }
 .benefitsWrapper > h5{
     text-align: left;
@@ -72,7 +76,7 @@
 }
 .ingredients{
     display: grid;
-    grid-template-columns: 20% 20% 20% 25%;
+    grid-template-columns: 25% 25% 25% 25%;
     color: black;
     gap: 0px;
     padding: 0px;
@@ -122,10 +126,13 @@
     margin: 20px 0px 5px;
     cursor: pointer;
 }
+.ratingWrapper{
+    display: flex;
+}
 .rating{
     font-size: 9px;
     color: #25292b;
-    margin: 0px;
+    margin: 5px 0px 0px 10px;
 }
 .price{
     display: flex;

@@ -22,7 +22,6 @@ export  const Routers = () => {
           <Route path='/address' element={<AddressPage/>}/>
           <Route path='/payment' element={<PaymentPage/>}/>
           <Route path='/success' element={<PaymentSuccess/>}/>
-
         </Routes>
       </UserAuthContextProvider>
         
