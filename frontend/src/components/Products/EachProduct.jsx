@@ -67,7 +67,6 @@ export default function EachProduct() {
       <NavbarTopSec />
       <Navbar/>
       <div className={Styles.container} >
-
         <div className={Styles.containerImage} >
         <img src={user.img_url} alt=""/>
         <div className={Styles.imgDisp} >

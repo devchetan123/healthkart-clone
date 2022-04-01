@@ -1,17 +1,20 @@
 import React from 'react'
 import styles from '../css/nav.module.css'
-import LoginSIgnup from './Auth/LoginSIgnup'
+
+
+
 
 
 
 export const Navbar = () => {
+    
   return (
     
     <div>
         {/* header strats here */}
         <header className={styles.header}>
             <div className={styles.container}>
-                
+            
                 <div className={[styles.row, styles.vCenter].join(' ')}>
                     {/* <div className={[styles.header-item, styles.item-left].join(' ')}>
 
@@ -21,19 +24,19 @@ export const Navbar = () => {
                         <nav className={styles.menu}>
                             <ul className={styles.menuMain}>
                                 <li  className={styles.menuItemHasChildren}>
-                                    <a href = "/#">Category</a>
+                                    <a href = "/products">Category</a>
                                     <div className={[styles.subMenu, styles.megaMenu, styles.megaMenuColumn4].join(' ')}>
                                        <div className={styles.listItem}>
                                           <h4 className={styles.title}>Proteins</h4>
                                           <ul>
-                                              <li><a href="/#">Whey Proteins</a></li>
-                                              <li><a href="/#">Begginer's Whey Protein</a></li>
-                                              <li><a href="/#">Whey Protein Isolate</a></li>
-                                              <li><a href="/#">Raw Whey Proteins</a></li>
-                                              <li><a href="/#">Plant Proteins</a></li>
-                                              <li><a href="/#">Protein for Women</a></li>
-                                              <li><a href="/#">Protein Blends</a></li>
-                                              <li><a href="/#">Soy Protein</a></li>
+                                              <li><a href="/products">Whey Proteins</a></li>
+                                              <li><a href="/products">Begginer's Whey Protein</a></li>
+                                              <li><a href="/products">Whey Protein Isolate</a></li>
+                                              <li><a href="/products">Raw Whey Proteins</a></li>
+                                              <li><a href="/products">Plant Proteins</a></li>
+                                              <li><a href="/products">Protein for Women</a></li>
+                                              <li><a href="/products">Protein Blends</a></li>
+                                              <li><a href="/products">Soy Protein</a></li>
                                           </ul>
                                        </div>
                                        <div className={styles.listItem}>
@@ -84,10 +87,10 @@ export const Navbar = () => {
                                               <li><a href="/#">ZMA</a></li>
                                               </ul>
                                        </div>
-                                       <div className={styles.listItem}>
+                                       {/* <div className={styles.listItem}>
                                       
                                       <img src = "https://static1.hkrtcdn.com/hknext/static/media/common/header/man-2.svg" alt="img"/>
-                                       </div>
+                                       </div> */}
                                     </div>
                                 </li>
                                 <li className={styles.menuItemHasChildren}>
@@ -252,7 +255,7 @@ export const Navbar = () => {
                     </div>
 
                 </div>
-
+                
             </div>
         </header>
         {/* header ends here */}

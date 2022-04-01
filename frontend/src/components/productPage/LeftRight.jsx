@@ -3,6 +3,9 @@ import { useEffect } from 'react'
 
 import { Left } from './Left'
 import styles from '../../css/productsPage/leftright.module.css'
+import NavbarTopSec from '../NavbarTopSec'
+import { Navbar } from '../Navbar'
+import {Footer} from "../Footer/Footer"
 
 export const LeftRight = () => {
     const API_URL = "https://healthkartdatabase.herokuapp.com/products/whey"
@@ -23,11 +26,12 @@ export const LeftRight = () => {
     },[])
   return (
     <>
-    
+         <NavbarTopSec/>
+         <Navbar/>
         <div className={styles.warpperleftright}>
         <Left items = {items} setItems={setItems}/>
-        
         </div>
+        <Footer/>
        
         
     </>

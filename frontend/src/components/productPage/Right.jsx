@@ -1,11 +1,31 @@
 import React from 'react'
 import styles from "../../css/productsPage/right.module.css";
 import {Box} from "@mui/material";
+import { add_cart } from "../../redux/Cart/cart.actions";
 
 import { FaRupeeSign,FaStar,FaStarHalfAlt} from 'react-icons/fa';
 import { Sortcomponent } from './Sortcomponent';
+import { useDispatch } from "react-redux";
+import {useNavigate} from "react-router-dom"
 
 export const Right = ({items,setItems}) => {
+
+    const navigate = useNavigate()
+    const dispatch = useDispatch();
+
+  const addCartFunc = (x) => {
+    const obj = {
+      id : x._id,
+      title : x.title,
+      price : x.originalPrice,
+      img : x.img_url,
+      qty : 1,
+      initPrice : x.originalPrice
+    }
+
+    dispatch(add_cart(obj))
+  }
+
   return (
     <div>
         <div>
@@ -70,16 +90,19 @@ export const Right = ({items,setItems}) => {
                                       
                                  <img src={item.img_url} alt = "Product" className={styles.prodimg}/>
                                  </div>
-                                 <p className={styles.title}>{item.title}</p>
+                                 <p onClick={() => navigate(`/products/${item._id}`)} className={styles.title}>{item.title}</p>
                                 {/* <span><Rating name="size-medium" defaultValue={4} className={styles.rating}/>
                                  {item.rating}</span> */}
                                 <p className={styles.star}><FaStar/><FaStar/><FaStar/><FaStar/><FaStarHalfAlt/><span style={{color:"black"}}>{item.rating}</span></p>
                                  
                                  <div>
                                  <p><FaRupeeSign/><span className={styles.pricebold}>{item.originalPrice}</span>&nbsp;&nbsp;
-                                 <span className={styles.pricelinethrough}><FaRupeeSign/>{`${+item.originalPrice+2000}`}</span>
+                                 <span className={styles.pricelinethrough}><FaRupeeSign/>{`${item.originalPrice+2000}`}</span>
                                  <span>
-                                     <button className={styles.quickbuy}>
+                                     <button onClick={() => { 
+                                         addCartFunc(item)
+                                         navigate("/payment")
+                                      }} className={styles.quickbuy}>
                                          <img src="	https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder-buy.svg" alt="flash"/>
                                          Quickbuy
                                      </button>
@@ -87,7 +110,7 @@ export const Right = ({items,setItems}) => {
                                  </p>
                                  <button className={styles.premiumprice}>
                                      <img src="https://static1.hkrtcdn.com/hknext/static/media/loyalty/premium-logo-new.svg" alt="crown" className={styles.crownimg}/>
-                                     Premium Member Price: <FaRupeeSign/>{+item.originalPrice-400}
+                                     Premium Member Price: <FaRupeeSign/>{item.originalPrice-400}
                                  </button>
                                 
                                  </div>
