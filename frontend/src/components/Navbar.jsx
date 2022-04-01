@@ -29,11 +29,11 @@ export const Navbar = () => {
                                               <li><a href="/products">Whey Proteins</a></li>
                                               <li><a href="/products">Begginer's Whey Protein</a></li>
                                               <li><a href="/products">Whey Protein Isolate</a></li>
-                                              <li><a href="/#">Raw Whey Proteins</a></li>
-                                              <li><a href="/#">Plant Proteins</a></li>
-                                              <li><a href="/#">Protein for Women</a></li>
-                                              <li><a href="/#">Protein Blends</a></li>
-                                              <li><a href="/#">Soy Protein</a></li>
+                                              <li><a href="/products">Raw Whey Proteins</a></li>
+                                              <li><a href="/products">Plant Proteins</a></li>
+                                              <li><a href="/products">Protein for Women</a></li>
+                                              <li><a href="/products">Protein Blends</a></li>
+                                              <li><a href="/products">Soy Protein</a></li>
                                           </ul>
                                        </div>
                                        <div className={styles.listItem}>
