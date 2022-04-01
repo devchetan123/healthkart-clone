@@ -5,6 +5,7 @@ import style from "../../css/product.module.css"
 import { useNavigate } from "react-router-dom";
 import { FiPlus } from "react-icons/fi"
 import { AiOutlineMinus } from "react-icons/ai"
+import axios from "axios"
 
 function Product({ product }) {
 
@@ -28,6 +29,22 @@ function Product({ product }) {
     useEffect(()=>{
       calculateDiscount(product.price)
     },[product.price])
+
+    const handleWatchList = (x)=>{
+      const payload = {
+        title : x.title,
+        img_url : x.img_url,
+        originalPrice : x.originalPrice,
+        rating : x.rating,
+        discountedPrice : x.discountedPrice
+    }
+    const con ={
+        url: `https://json-practice.herokuapp.com/watchlist`,
+        method:"post",
+        data:payload
+    }
+    return axios(con)
+    }
     
   return (
     <div className={style.mainProductDiv} >
@@ -70,7 +87,7 @@ function Product({ product }) {
       </div>
       <div className={style.delandwishbtnsmaller} >
         <button onClick={() => dispatch(remove_cart(product.id))} > <img src="https://i.ibb.co/PMXXZZz/icons8-delete-24.png" height={"20.2px"} /> Remove</button>
-        <button><img src="https://i.ibb.co/1675Lqn/icons8-heart-24-3.png " height={"19px"} /> Move to Wishlist</button>
+        <button onClick={() => handleWatchList(product)} ><img src="https://i.ibb.co/1675Lqn/icons8-heart-24-3.png " height={"19px"} /> Move to Wishlist</button>
       </div>
       
     </div>

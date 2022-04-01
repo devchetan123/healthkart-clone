@@ -46,7 +46,7 @@ cursor: pointer;
 
 .rightNavdiv{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   position: absolute;
   right: 10px;
 }
@@ -71,7 +71,7 @@ cursor: pointer;
 }
 
 .rightNavdiv hr{
-  height: 15px;
+  height: 10px;
   background-color: rgb(109, 109, 109);
   margin-right: 10px;
 }

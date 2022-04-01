@@ -11,6 +11,7 @@ import {LeftRight} from "../components/productPage/LeftRight"
 import { LandingPage } from "../components/LandingPage/LandingPage"
 import Profile from '../components/ProfileStructure/Profile'
 import { ProfileStructure } from '../components/ProfileStructure/ProfileStructure'
+import Wishlist from '../components/Wishlist'
 
 export  const Routers = () => {
   return (
@@ -22,6 +23,7 @@ export  const Routers = () => {
           <Route path='/products/:id' element={<EachProduct/>}/>
           <Route path="/cart" element={<CartPage/>}/>
           <Route path='/address' element={<AddressPage/>}/>
+          <Route path='/wishlist' element={<Wishlist/>}/>
           <Route path='/payment' element={<PaymentPage/>}/>
           <Route path='/success' element={<PaymentSuccess/>}/>
           <Route path='/profile' element={<ProfileStructure/>}/>
