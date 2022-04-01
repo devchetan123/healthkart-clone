@@ -67,7 +67,8 @@ export default function EachProduct() {
       <NavbarTopSec />
       <Navbar/>
       <div className={Styles.container} >
-      <div className={Styles.containerImage} >
+
+        <div className={Styles.containerImage} >
         <img src={user.img_url} alt=""/>
         <div className={Styles.imgDisp} >
         <img src={user.img_url} alt="" />
@@ -75,24 +76,30 @@ export default function EachProduct() {
         <img src={user.img_url} alt="" />
         <img src={user.img_url} alt="" />
         </div>
-      <button className={Styles.watchlist} onClick={()=>{
+        <button className={Styles.watchlist} onClick={()=>{
         handleWatchList(user._id,user.title,user.img_url)
-      }}
-      >
+        }}
+        >
         <FavoriteBorderIcon className={Styles.watchlistLogo} />
         Add to wishlist
-      </button>  
-      </div>
+        </button>  
+        </div>
+
+
       <div className={Styles.containerData}>
         <div>
-            <h3 className={Styles.byProduct}>{user.title}</h3>
+            <h3 className={Styles.byProduct1}>{user.title}</h3>
             <p className={Styles.byProduct}>By <span>HealthKart</span></p>
-            <h5 className={Styles.rate}>{user.rating} <span><StarIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)"}} /></span> </h5>
-            <button className={Styles.offer} >{`${user.discount}% OFF`}</button>
+            <h5 className={Styles.rate}>{user.rating} <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/star-filled-new.svg" alt="" /> </h5>
+            <button className={Styles.offer} >{`${Math.floor((user.originalPrice-user.discountedPrice)/100)}% OFF`}</button>
             <div className={Styles.price} >
-                <h2>{`₹${user.originalPrice}`}</h2>
-                <p>₹{Math.floor(user.originalPrice+(user.originalPrice*(user.discount/100)))}</p>
-                <p>+ <span><CircleIcon style={{fontSize:"15px",color:"rgb(196, 196, 96)",marginTop:"10px",marginLeft:"2px",marginRight:"2px"}} /></span>Get HK Cash +₹175</p>
+                <h2>{`₹${user.discountedPrice}`}</h2>
+                <h2>{user.originalPrice}</h2>
+                <p>+ <img src="https://static1.hkrtcdn.com/hknext/static/media/common/hk-cash-yellow.svg" alt="" /> Get HK Cash +₹175</p>
+            </div>
+            <div className={Styles.premium} >
+                <img src="https://static1.hkrtcdn.com/hknext/static/media/loyalty/premium-logo-new.svg" alt="" />
+                <p>Premium Member Price : ₹{user.premiumPrice}</p>
             </div>
             <div className={Styles.offers} >
               <p>3 interent free payments of ₹175</p>
@@ -112,22 +119,23 @@ export default function EachProduct() {
                 <p>{count}</p>
                 <button onClick={()=>setCount(count+1)} >+</button>  
               </div>  
-              <button className={Styles.cartAdd} onClick={() => addCartFunc(user)} ><ShoppingCartIcon className={Styles.cont} /> ADD TO CART</button>
-              <button className={Styles.directBuy}><BoltIcon className={Styles.cont1} /> QUICK BUY</button>
+              <button className={Styles.cartAdd} onClick={() => addCartFunc(user)} ><img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/add-to-cart-black.svg" alt="" /> ADD TO CART</button>
+              <button className={Styles.directBuy}><img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/thunder.svg" alt="" /> QUICK BUY</button>
             </div>  
             <div className={Styles.weight} >
               <p>WEIGHT</p>
               {
-                ["1.1","11","2.2"].map((r)=>{
-                  return(
-                    <button className={Styles.weightButton} >{`${r} lb`}</button>
-                  )
+                // console.log(user)
+                user?.containsWeight?.map((r)=>{
+                  return <button className={Styles.weightButton} >{`${r} lb`}</button>
                 })
               }
+              
             </div>
+            
         </div>
 
-        <div className={Styles.delivery} >
+        {/* <div className={Styles.delivery} >
               <p>Delivery Option</p>
               <div className={Styles.input} >
                    <input type="text" placeholder="Enter Pincode" />
@@ -137,7 +145,7 @@ export default function EachProduct() {
               <p><DoneIcon style={{fontSize:"13px"}}/> Free Shiping</p>
               <p><DoneIcon style={{fontSize:"13px"}}/> Cash on Delivery Available</p>
               <p><DoneIcon style={{fontSize:"13px"}}/> 14 days Return</p>
-        </div>      
+        </div>       */}
         <div className={Styles.sponsor}>
               <img src="https://static1.hkrtcdn.com/hknext/static/media/pdp/fssai.png" alt="" />
               <p>10015064000576</p>

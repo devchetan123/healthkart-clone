@@ -12,7 +12,7 @@ export const GoogleAuthLogin = () => {
         e.preventDefault();
         try {
           await googleSignIn();
-          navigate("/content");
+          navigate("/");
         } catch (error) {
           console.log(error.message);
         }
