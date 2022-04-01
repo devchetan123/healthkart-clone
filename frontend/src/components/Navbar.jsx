@@ -21,14 +21,14 @@ export const Navbar = () => {
                         <nav className={styles.menu}>
                             <ul className={styles.menuMain}>
                                 <li  className={styles.menuItemHasChildren}>
-                                    <a href = "/#">Category</a>
+                                    <a href = "/products">Category</a>
                                     <div className={[styles.subMenu, styles.megaMenu, styles.megaMenuColumn4].join(' ')}>
                                        <div className={styles.listItem}>
                                           <h4 className={styles.title}>Proteins</h4>
                                           <ul>
-                                              <li><a href="/#">Whey Proteins</a></li>
-                                              <li><a href="/#">Begginer's Whey Protein</a></li>
-                                              <li><a href="/#">Whey Protein Isolate</a></li>
+                                              <li><a href="/products">Whey Proteins</a></li>
+                                              <li><a href="/products">Begginer's Whey Protein</a></li>
+                                              <li><a href="/products">Whey Protein Isolate</a></li>
                                               <li><a href="/#">Raw Whey Proteins</a></li>
                                               <li><a href="/#">Plant Proteins</a></li>
                                               <li><a href="/#">Protein for Women</a></li>
