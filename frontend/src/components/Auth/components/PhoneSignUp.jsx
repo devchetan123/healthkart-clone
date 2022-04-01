@@ -5,6 +5,7 @@ import { Link, useNavigate } from 'react-router-dom'
 import { useUserAuth } from '../context/UserAuthContext'
 import { GoogleAuthLogin } from './GoogleAuthLogin'
 import Styles from "../../../css/LoginSignup/PhoneSignup.module.css"
+import { Button } from '@mui/material'
 
 export const PhoneSignUp = () => {
     const [number,setNumber] = useState("")
@@ -49,28 +50,24 @@ export const PhoneSignUp = () => {
     <div>
       <div >
         {error && <p>{error}</p>}
-        <form onSubmit={getOtp} style={{display:!flag?"block":"none"}} >
+        {/* <form onSubmit={getOtp} style={{display:!flag?"block":"none"}} >
           <div  controlId="formBasicPhoneNumber">
             <PhoneInput
-            style={{height:"50px"}}
-            className={Styles.phoneInput}
-            defaultCountry='IN'
+            defaultCountry='PH'
             value={number}
-            onChange={setNumber}
+            onChange={(e)=>setNumber(e.target.value)}
             placeholder="Phone Number"
             />
-            
             <div id="recaptcha-container"/>
           </div>
-           <div>
-                <button className={Styles.button}  type="submit" >sendOtp</button>
+           <div className='button-right' >
+                <Link to="/" ><Button varient="secondary">Cancel</Button></Link>
+                <Button varient="primart" type="submit" >sendOtp</Button>
            </div>
-           <div className={Styles.gouth}>
-             
-           </div>
-          </form>
+          </form> */}
 
-          <form onSubmit={verifyOtp} style={{display:flag?"block":"none"}} >
+
+          {/* <form onSubmit={verifyOtp} style={{display:flag?"block":"none"}} >
           <div  controlId="formBasicotp">
            <input
                type="text"
@@ -82,7 +79,13 @@ export const PhoneSignUp = () => {
                 <Link to="/home" ><button >Cancel</button></Link>
                 <button  type="submit" >VerifyOtp</button>
            </div>
-          </form>
+          </form> */}
+          <div style={{margin:"2px",width:"300px"}}>
+            <p style={{padding:"5px",fontSize:"12px"}}>Mobile Number</p>
+            <input style={{padding:"5px",margin:"5px",width:"250px"}}  type="number" placeholder='Enter 10 digit no.' />
+            <button style={{border:"0px",fontSize:"15px"  ,margin:"5px",borderRadius:"5px",padding:"5px",color:"white",width:"250px",backgroundColor:"#00aeae"}} >Login via OTP</button>
+          </div>
+          <hr />
           </div>
           <div className={Styles.gouth}>
              <GoogleAuthLogin  />

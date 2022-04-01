@@ -21,14 +21,14 @@
     background-color: white;
     color: black;
 }
-@media screen and (min-width: 420px) and (max-width:750px){
+
+@media screen and (min-width: 420px) and (max-width:750px) {
     .loginLeft{
-        display: none;
+        display:none ;
     }
-  }
-  @media screen and (max-width:420px){
+}
+@media screen and (max-width:420px) {
     .loginLeft{
-        display: none;
+        display:none ;
     }
-  
-  }
+}
