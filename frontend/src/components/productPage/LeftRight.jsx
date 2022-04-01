@@ -5,7 +5,7 @@ import { Left } from './Left'
 import styles from '../../css/productsPage/leftright.module.css'
 
 export const LeftRight = () => {
-    const API_URL = "https://json-practice.herokuapp.com/product"
+    const API_URL = "https://healthkartdatabase.herokuapp.com/products/whey"
     const [items,setItems] = useState([])
     useEffect(() =>{
         const fetchItems = async() => {

@@ -1,36 +1,27 @@
 import React from 'react'
 import { Route, Routes } from 'react-router-dom'
-import ProtectedRoute from '../components/Auth/components/ProtectedROute'
 import { UserAuthContextProvider } from '../components/Auth/context/UserAuthContext'
-import { Content } from '../components/Content'
-import Home from '../components/Home'
-<<<<<<< HEAD
 import  EachProduct  from '../components/Products/EachProduct'
-import { Products } from '../components/Products/Products'
-=======
 import AddressPage from '../components/PurchaseProccess/AddressPage'
 import CartPage from '../components/PurchaseProccess/CartPage'
 import PaymentPage from "../components/PurchaseProccess/PaymentPage"
 import PaymentSuccess from '../components/PurchaseProccess/PaymentSuccess'
->>>>>>> cartPages
+import {LeftRight} from "../components/productPage/LeftRight"
 
+import { LandingPage } from "../components/LandingPage/LandingPage"
 
 export  const Routers = () => {
   return (
     <div>
       <UserAuthContextProvider>
         <Routes>
-          <Route path="/" element={<Home/>}/>
-<<<<<<< HEAD
-          <Route path="/products/*" element={<Products/>}>
-          <Route path=':id' element={<EachProduct/>} />
-          </Route>
-=======
+          <Route path="/" element={<LandingPage/>}/>
+          <Route path="/products" element={<LeftRight/>} />
+          <Route path='/products/:id' element={<EachProduct/>}/>
           <Route path="/cart" element={<CartPage/>}/>
           <Route path='/address' element={<AddressPage/>}/>
           <Route path='/payment' element={<PaymentPage/>}/>
           <Route path='/success' element={<PaymentSuccess/>}/>
->>>>>>> cartPages
         </Routes>
       </UserAuthContextProvider>
         

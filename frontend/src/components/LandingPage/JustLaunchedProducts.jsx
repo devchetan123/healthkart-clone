@@ -10,11 +10,11 @@ import { Container } from './Container';
 export const JustLaunchedProducts = () => {
     const [data, setData] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/justlaunched")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.justLaunchedProducts);
-            setData(res.justLaunchedProducts)
+            console.log(res);
+            setData(res)
         })
         .catch((err)=>console.log(err))
     }, [])

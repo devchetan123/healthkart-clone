@@ -10,11 +10,11 @@ import { Container } from './Container';
 export const TrendingInMassGainer = () => {
     const [data, setData] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/trendingmassgainer")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.trendingInMassGainer);
-            setData(res.trendingInMassGainer)
+            console.log(res);
+            setData(res)
         })
         .catch((err)=>console.log(err))
     }, [])
