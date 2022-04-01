@@ -5,7 +5,7 @@ import LockOutlinedIcon from '@mui/icons-material/LockOutlined';
 import Rating from '@mui/material/Rating';
 import styles from "./LandingPage.module.css"
 import DoneIcon from '@mui/icons-material/Done';
-import { positions } from '@mui/system';
+// import { positions } from '@mui/system';
 
 export const Container = ({item}) => {
     const [open, setOpen] = useState(false);
@@ -15,10 +15,12 @@ export const Container = ({item}) => {
         var displayDetails = {
             display: "block",
             position: "absolute",
-            // filter: "brightness(90%)"
         }
         var containerHover = {
-            boxShadow: "10px 0px 5px black"
+            boxShadow: "1px 0px 10px 5px #E6E6E6"
+        }
+        var buttonHover = {
+            backgroundColor: "#00C2C1"
         }
     }
   return (
@@ -49,14 +51,15 @@ export const Container = ({item}) => {
                     </div>        
                     <div className={styles.detailsWrapper}>
                         <h5 className={styles.title}>{item.title}</h5>
-                        <div className={styles.ratingWrapper}><Rating value={item.rating} readOnly precision={0.1} size="small" sx={{color: "#008497"}}></Rating><h6 className={styles.rating}>{item.rating}</h6></div>
+                        {item.rating!==""? (<div className={styles.ratingWrapper}><Rating value={item.rating} readOnly precision={0.1} size="small" sx={{color: "#008497"}}></Rating><h6 className={styles.rating}>{item.rating}</h6></div>):(<div className={styles.ratingWrapper}></div>)}
+                        
                         <div className={styles.priceAndAdd}>
                             <div className={styles.price}>
                                 <h5 className={styles.discountPrice}><CurrencyRupeeIcon sx={{color: "black", fontSize: "12px"}}/>{item.discountedPrice}</h5>
                                 <h5 className={styles.originalPrice}><CurrencyRupeeIcon sx={{color: "#929495", fontSize: "10px"}}/>{item.originalPrice}</h5>
                             </div>
                             <div>
-                                <button className={styles.addBtn}><div style={{display: "flex", width: "35px", margin: "auto"}}><AddShoppingCartIcon sx={{color: "#004b5d", fontSize: "12px"
+                                <button className={styles.addBtn}  style={buttonHover}><div style={{display: "flex", width: "35px", margin: "auto"}}><AddShoppingCartIcon sx={{color: "#004b5d", fontSize: "12px"
                             }}/><p style={{margin: "2px"}}>ADD</p></div></button>
                             </div>
                         </div>
