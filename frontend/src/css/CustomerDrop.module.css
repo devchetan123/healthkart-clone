@@ -1,0 +1,14 @@
+.customerDrop{
+    display:flex;
+    gap:5%;
+    padding:5px ;
+}
+.customerDropCont1>div{
+    border-right: 1px solid grey;
+    
+}
+.customerMenu{
+    font-size: 15px;
+    display: flex;
+    gap: 2px;
+}

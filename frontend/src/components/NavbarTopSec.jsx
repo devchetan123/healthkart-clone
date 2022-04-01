@@ -2,6 +2,7 @@ import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
 import style from "../css/navbartopsec.module.css"
+import CustomerDrop from './CustomerDrop'
 import AccountDrop from './Dropdowns/AccountDrop'
 
 function NavbarTopSec() {
@@ -22,7 +23,7 @@ function NavbarTopSec() {
             <p>Loyalty Rewards</p>
             <hr />
             <div>
-                <p>Customer Support</p>
+                <CustomerDrop/>
                 <img className={style.arrownav} src="https://i.ibb.co/D5gvVwF/icons8-expand-arrow-50-1.png" alt=""  height={"15px"}  />
             </div>
             <hr />
