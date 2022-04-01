@@ -14,7 +14,7 @@ function NavbarTopSec() {
 
   return (
     <div  className={style.navtopsection} >
-        <img src="https://i.ibb.co/NWKgftw/Screenshot-13.png" alt="" height={"60px"} />
+        <img onClick={() => navigate("/")}  src="https://i.ibb.co/NWKgftw/Screenshot-13.png" alt="" height={"60px"} />
         <div className={style.searchDiv} >
             <img src="https://i.ibb.co/nMQ6VKT/icons8-search-30.png" alt="" height={"24px"} />
             <input type="text" placeholder='Search for products, brands or Health Goals'/>
