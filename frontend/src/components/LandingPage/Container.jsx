@@ -8,11 +8,14 @@ import DoneIcon from '@mui/icons-material/Done';
 import { positions } from '@mui/system';
 import { add_cart } from '../../redux/Cart/cart.actions';
 import { useDispatch } from 'react-redux';
+import {useNavigate} from "react-router-dom"
 
 export const Container = ({item}) => {
     const [open, setOpen] = useState(false);
     const handleOpen = () => setOpen(true);
     const handleClose = () => setOpen(false);
+
+    const navigate = useNavigate();
     if(open){
         var displayDetails = {
             display: "block",
@@ -68,7 +71,7 @@ export const Container = ({item}) => {
                         <div><button className={styles.discountBtn}>{item.discount} off</button></div>
                     </div>        
                     <div className={styles.detailsWrapper}>
-                        <h5 className={styles.title}>{item.title}</h5>
+                        <h5 className={styles.title} onClick={()=>navigate(`/products/${item._id}`)}>{item.title}</h5>
                         {item.rating? (<div className={styles.ratingWrapper}><Rating value={item.rating} readOnly precision={0.1} size="small" sx={{color: "#008497"}}></Rating><h6 className={styles.rating}>{item.rating}</h6></div>):(<div className={styles.ratingWrapper}></div>)}
                         <div className={styles.priceAndAdd}>
                             <div className={styles.price}>
