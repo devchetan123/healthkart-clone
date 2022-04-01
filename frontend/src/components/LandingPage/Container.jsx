@@ -76,7 +76,7 @@ export const Container = ({item}) => {
                                 <h5 className={styles.originalPrice}><CurrencyRupeeIcon sx={{color: "#929495", fontSize: "10px"}}/>{item.originalPrice}</h5>
                             </div>
                             <div>
-                                <button onClick={() => addCartFunc(item)} className={styles.addBtn}><div style={{display: "flex", width: "35px", margin: "auto", cursor: "pointer"}}><AddShoppingCartIcon sx={{color: "#004b5d", fontSize: "12px"
+                                <button onClick={() => addCartFunc(item)} className={styles.addBtn} style={buttonHover}><div style={{display: "flex", width: "35px", margin: "auto", cursor: "pointer"}}><AddShoppingCartIcon sx={{color: "#004b5d", fontSize: "12px"
                             }}/><p style={{margin: "2px" }}>ADD</p></div></button>
                             </div>
                         </div>
