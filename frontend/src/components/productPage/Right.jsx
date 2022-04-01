@@ -58,7 +58,13 @@ export const Right = ({items,setItems}) => {
                 display: 'grid',
                 columnGap: 3,
                 rowGap: 3,
-                gridTemplateColumns: 'repeat(3, 1fr)',
+                gridTemplateColumns:{
+                    xl:'repeat(3, 1fr)',
+                    lg:'repeat(3, 1fr)',
+                    md:'repeat(3, 1fr)',
+                    sm:'repeat(2, 1fr)',
+                    xs:'repeat(1, 1fr)',
+                } 
               }}>
                   {items.map((item) => (
                         <div id = {item.id}>
