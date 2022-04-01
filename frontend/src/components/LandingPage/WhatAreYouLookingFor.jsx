@@ -4,11 +4,11 @@ import styles from "./LandingPage.module.css";
 export const WhatAreYouLookingFor = () => {
     const [images, setImages] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/whatarelooking")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.whatAreYouLookingFor);
-            setImages(res.whatAreYouLookingFor);
+            console.log(res);
+            setImages(res);
         })
         .catch((err)=>console.log(err))
     },[])

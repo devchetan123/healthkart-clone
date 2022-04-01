@@ -66,8 +66,8 @@ export const Left = ({items,setItems}) => {
     if (info.startsWith("price")) {
       if (info === "price_1") {
         const newitems = items.filter(
-           (item) => item.price > Number("1000") &&
-                     item.price <= Number("2000")                       
+           (item) => (item.originalPrice > Number("1000") &&
+                     item.originalPrice <= Number("2000") )                      
          );
  
          setItems([...newitems]);
@@ -75,8 +75,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_2") {
         const newitems = items.filter(
            (item) =>
-             item.price >= Number("2001") &&
-             item.price <= Number("3000")
+             item.originalPrice >= Number("2001") &&
+             item.originalPrice <= Number("3000")
              
          );
  
@@ -85,8 +85,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_3") {
          const newitems = items.filter(
            (item) =>
-             item.price >= Number("3001") &&
-             item.price <= Number("4000")
+             item.originalPrice >= Number("3001") &&
+             item.originalPrice <= Number("4000")
          );
  
          setItems(newitems);
@@ -94,8 +94,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_4") {
          const newitems = items.filter(
            (item) =>
-             item.price >= Number("4001") &&
-             item.price <= Number("5000")
+             item.originalPrice >= Number("4001") &&
+             item.originalPrice <= Number("5000")
          );
  
          setItems(newitems);
@@ -103,8 +103,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_5") {
          const newitems = items.filter(
            (item) =>
-             item.price >= Number("5001") &&
-             item.price <= Number("6000")
+             item.originalPrice >= Number("5001") &&
+             item.originalPrice <= Number("6000")
          );
  
          setItems(newitems);
@@ -112,8 +112,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_6") {
          const newitems = items.filter(
            (item) =>
-             item.price >= Number("6001") &&
-             item.price <= Number("7000") 
+             item.originalPrice >= Number("6001") &&
+             item.originalPrice <= Number("7000") 
          );
  
          setItems(newitems);
@@ -121,8 +121,8 @@ export const Left = ({items,setItems}) => {
        if (info === "price_7") {
          const newitems = items.filter(
            (item) =>
-             item.price >= Number("7001") &&
-             item.price <= Number("8000")
+             item.originalPrice >= Number("7001") &&
+             item.originalPrice <= Number("8000")
          );
  
          setItems(newitems);

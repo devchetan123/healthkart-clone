@@ -3,14 +3,14 @@ import styles from "../../css/productsPage/right.module.css";
 
 export const Sortcomponent = ({items,setItems}) => {
     const sorting = (e) => {
-         const tag = e.target.value
+         const tag = e.currentTarget.value
         if (tag === "priceltoh") {
-            const updatelist =    [...items].sort((a,b)=>  +(a.price-a.discount) - +(b.price-b.discount))
+            const updatelist =    [...items].sort((a,b)=>  +(a.originalPrice) - +(b.originalPrice))
             setItems(updatelist)
       
         }
         if (tag === "pricehtol") {
-            const updatelist =    [...items].sort((a,b)=>  +(b.price-b.discount) - +(a.price-a.discount))
+            const updatelist =    [...items].sort((a,b)=>  +(b.originalPrice) - +(a.originalPrice))
          setItems(updatelist)
       
         }

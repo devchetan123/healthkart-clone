@@ -10,11 +10,11 @@ import { Container } from './Container';
 export const TrendingNow = () => {
     const [data, setData] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/trendingnow")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.trendingNow);
-            setData(res.trendingNow)
+            console.log(res);
+            setData(res)
         })
         .catch((err)=>console.log(err))
     }, [])

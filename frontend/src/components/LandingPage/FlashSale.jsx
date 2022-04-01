@@ -15,14 +15,16 @@ export const FlashSale = () => {
     // })
     // const [data, setData] = useState([]);
     useEffect(()=>{
-        fetch("http://localhost:3000/landingPageArray")
+        fetch("https://healthkartdatabase.herokuapp.com/products/flashsale")
         .then((res)=>res.json())
         .then((res)=>{
-            console.log(res.flashSale);
-            setVal(res.flashSale)
+            console.log(res);
+            setVal(res)
         })
         .catch((err)=>console.log(err))
     }, [])
+
+
   return (
     <div className={styles.tagBox}>
         <div className={styles.tag}>

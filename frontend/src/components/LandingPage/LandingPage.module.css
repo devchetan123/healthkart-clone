@@ -129,7 +129,7 @@
 }
 .ratingWrapper{
     display: flex;
-    min-height: 18px;   
+    min-height: 18px;
 }
 .rating{
     font-size: 8px;
@@ -155,6 +155,7 @@
     text-decoration: line-through;
 }
 .addBtn{
+    cursor: pointer;
     margin-top: 12px;
     padding: 8px 6px;
     background: #E1EDF4;
