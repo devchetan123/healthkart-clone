@@ -20,11 +20,16 @@ export const GoogleAuthLogin = () => {
   return (
     <div>
         <div>
-          <GoogleButton
+          <button
+            style={{margin:"10px 20px 10px 80px"}}
             className="g-btn"
             type="dark"
             onClick={handleGoogleSignIn}
-          />
+          >
+            <div style={{display:"flex",gap:"10px",margin:"5px"}}>
+            <img  src="https://static1.hkrtcdn.com/hknext/static/media/common/Logo%20Google.svg" alt="" /> <span> Google</span>
+            </div>
+          </button>
         </div>
     </div>
   )

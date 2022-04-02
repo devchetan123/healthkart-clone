@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.mobileView{
+  display: none;
+}
 .navtopsection{
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -91,4 +93,22 @@ cursor: pointer;
 .rightNavdiv p:hover {
   color: rgb(16,132,126);
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 420px) and (max-width:750px){
+  .navtopsection{
+    display: none;
+  }
+  .mobileView{
+    display: block;
+  }
+}
+@media screen and (max-width:420px){
+  .navtopsection{
+    display: none;
+  }
+  .mobileView{
+    display: block;
+  }
 }
