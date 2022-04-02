@@ -2,7 +2,6 @@ import React, { useState } from 'react'
 import { useDispatch, useSelector } from 'react-redux'
 import { add_cart } from '../redux/Cart/cart.actions';
 import { useNavigate } from 'react-router';
-import NavbarTopSec from './NavbarTopSec';
 
 function Home() {
   let navigate = useNavigate();
@@ -60,7 +59,6 @@ function Home() {
 
   return (
     <div>
-      <NavbarTopSec/>
       {
         pro.map(x => {
           return <div key={x.id} >

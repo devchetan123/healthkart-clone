@@ -1,0 +1,28 @@
+.mobileView{
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+    width: 80%;
+    margin: 5%;
+}
+.head1{
+    padding: 2%;
+    display: flex;
+    gap:12%;
+    text-align: center;
+
+}
+.head1>div>img{
+    width: 20px;
+}
+.head2{
+    margin: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+.head2>div>h4{
+    display: flex;
+    gap: 5px;
+    width: 30vh;
+}

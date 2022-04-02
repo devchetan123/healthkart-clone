@@ -5,7 +5,9 @@
   padding: 0;
   box-sizing: border-box;
 }
-
+.mobileView{
+  display: none;
+}
 .navtopsection{
   font-family: "Roboto", sans-serif;
   display: flex;
@@ -13,6 +15,10 @@
   align-items: center;
   padding: 13px;
   padding-left: 40px;
+}
+
+.navtopsection + img {
+cursor: pointer;
 }
 
 
@@ -42,7 +48,7 @@
 
 .rightNavdiv{
   display: flex;
-  align-items: center;
+  /* align-items: center; */
   position: absolute;
   right: 10px;
 }
@@ -67,7 +73,7 @@
 }
 
 .rightNavdiv hr{
-  height: 15px;
+  height: 10px;
   background-color: rgb(109, 109, 109);
   margin-right: 10px;
 }
@@ -87,4 +93,22 @@
 .rightNavdiv p:hover {
   color: rgb(16,132,126);
   cursor: pointer;
+}
+
+
+@media screen and (min-width: 420px) and (max-width:750px){
+  .navtopsection{
+    display: none;
+  }
+  .mobileView{
+    display: block;
+  }
+}
+@media screen and (max-width:420px){
+  .navtopsection{
+    display: none;
+  }
+  .mobileView{
+    display: block;
+  }
 }

@@ -1,0 +1,20 @@
+*{
+    margin:0;
+    padding:0;
+    box-sizing: border-box;
+}
+.wrapperleftright{
+    display:grid;
+    grid-template-columns: 35% 65%;
+    border:1px solid black;
+}
+@media screen and (max-width:750px){
+    .wrapperleftright{
+        grid-template-columns: 100%;
+    }
+    
+}
+@media screen and (max-width:420px){
+
+}
+

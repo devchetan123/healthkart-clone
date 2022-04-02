@@ -1,0 +1,34 @@
+.leftBar{
+    height: auto;
+}
+
+.login{
+    display: flex;
+     
+}
+
+.loginLeft{
+    padding: 3%;
+    background-image: url(https://static1.hkrtcdn.com/hknext/static/media/signupFlow/login-bg.png);
+    height: 400px;
+    color: white;
+}
+.loginLeft>p{
+    font-size: 15px;
+    font-weight: 700;
+}
+.tabnav{
+    background-color: white;
+    color: black;
+}
+
+@media screen and (min-width: 420px) and (max-width:750px) {
+    .loginLeft{
+        display:none ;
+    }
+}
+@media screen and (max-width:420px) {
+    .loginLeft{
+        display:none ;
+    }
+}
