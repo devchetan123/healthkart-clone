@@ -31,18 +31,19 @@ export default function EachProduct() {
     }
   }, [pharms]);
 
-  const handleWatchList = (id,title,image)=>{
+  const handleWatchList = (x)=>{
     const payload = {
-      id,
-      title,
-      image
+      title : x.title,
+      img_url : x.img_url,
+      originalPrice : x.originalPrice,
+      rating : x.rating,
+      discountedPrice : x.discountedPrice
   }
   const con ={
       url: `https://json-practice.herokuapp.com/watchlist`,
       method:"post",
       data:payload
   }
-  console.log(con)
   return axios(con)
   }
 
@@ -76,7 +77,7 @@ export default function EachProduct() {
         <img src={user.img_url} alt="" />
         </div>
         <button className={Styles.watchlist} onClick={()=>{
-        handleWatchList(user._id,user.title,user.img_url)
+        handleWatchList(user)
         }}
         >
         <FavoriteBorderIcon className={Styles.watchlistLogo} />

@@ -10,6 +10,7 @@ import { IconContext } from "react-icons";
 import { AiOutlineArrowLeft } from "react-icons/ai";
 import { FiHeart } from "react-icons/fi";
 
+
 function CartPage() {
   const [enterPin, setEnterPin] = useState(false);
   const [pincode, setPincode] = useState("");
@@ -66,6 +67,8 @@ function CartPage() {
     }
   }, [total, cart, totalPrice]);
 
+  
+
   return (
     <>
       <div className={ !hideDiscount ? style.background : style.backgroundBlu}>
@@ -109,7 +112,7 @@ function CartPage() {
               <AiOutlineArrowLeft onClick={() => navigate("/")} />
               <p>Cart ({cart.length} items)</p>
             </div>
-            <div className={style.cartrightNav}>
+            <div onClick={() => navigate("/wishlist")} className={style.cartrightNav}>
               <FiHeart />
               <p>My Wishlist</p>
             </div>
@@ -148,7 +151,7 @@ function CartPage() {
               <div className={style.cartTop}>
                 <h3>My Cart ({cart.length} items)</h3>
 
-                <div className={style.wishlistbtn}>
+                <div onClick={() => navigate("/wishlist")}  className={style.wishlistbtn}>
                   <img
                     src="https://i.ibb.co/vd1SVV0/icons8-heart-32.png"
                     height={"20px"}

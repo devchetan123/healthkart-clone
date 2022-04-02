@@ -7,11 +7,29 @@ import { FaRupeeSign,FaStar,FaStarHalfAlt} from 'react-icons/fa';
 import { Sortcomponent } from './Sortcomponent';
 import { useDispatch } from "react-redux";
 import {useNavigate} from "react-router-dom"
+import axios from 'axios';
 
 export const Right = ({items,setItems}) => {
 
     const navigate = useNavigate()
     const dispatch = useDispatch();
+
+
+    const handleWatchList = (x)=>{
+        const payload = {
+          title : x.title,
+          img_url : x.img_url,
+          originalPrice : x.originalPrice,
+          rating : x.rating,
+          discountedPrice : x.discountedPrice
+      }
+      const con ={
+          url: `https://json-practice.herokuapp.com/watchlist`,
+          method:"post",
+          data:payload
+      }
+      return axios(con)
+      }
 
   const addCartFunc = (x) => {
     const obj = {
@@ -77,7 +95,7 @@ export const Right = ({items,setItems}) => {
                                       &nbsp; &nbsp; &nbsp; &nbsp;   */}
                                       
 
-                                      <div  className={styles.iconContainer}>
+                                      <div  className={styles.iconContainer} onClick={() => handleWatchList(item)} >
                                       {/* <FaRegHeart className={styles.heart}/> */}
                                       <img src= "	https://static1.hkrtcdn.com/hknext/static/media/common/variant/wishlist/whistlist.svg"alt="heart"/>
                                       <img src = "https://static1.hkrtcdn.com/hknext/static/media/common/variant/wishlist/hover-heart.svg" 

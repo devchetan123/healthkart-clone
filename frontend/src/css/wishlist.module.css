@@ -1,0 +1,197 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700;900&display=swap");
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+.mainWishPage{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    gap: 20px;
+    font-family: "Roboto", sans-serif;;
+}
+
+.menulineinorder{
+    display: flex;
+    gap: 6px;
+}
+.orderbox > p {
+    margin-left: 25px;
+    font-weight: 500;
+    font-size: 16px;
+    margin-top: 8px;
+}
+
+.orderbox p {
+    cursor: pointer;
+}
+
+.orderbox{
+    border: 1px solid lightgrey;
+    padding: 12px;
+    margin-left: 50px;
+    margin-top: 20px;
+}
+
+.orderbox div {
+    color: rgb(56, 55, 55);
+    margin-top: 14px;
+    font-size: 14px;
+}
+
+.leftimgbanner{
+    margin-left: 50px;
+    cursor: pointer;
+    margin-top: 20px;
+}
+
+.mainproductdiv{
+    display: flex;
+    align-items: center;
+    border: 1px solid lightgray;
+    position: relative;
+    padding: 35px 20px 35px 20px;
+}
+
+.priceline{
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 10px;
+}
+
+.hkline{
+    display: flex;
+    gap: 3px;
+    margin-top: 10px;
+    align-items: center;
+}
+
+.mylist{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    border: 1px solid rgb(223, 223, 223);
+    align-items: center;
+    padding: 15px;
+    margin-top: 20px;
+}
+
+.mylist :nth-child(1){
+    text-align: left;
+    font-size: 20px;
+    font-weight: 500;
+}
+
+
+.mylist :nth-child(2){
+   text-align: right;
+   font-weight: 500;
+   color: rgb(7, 170, 179);
+   font-size: 14px;
+   cursor: pointer;
+}
+
+.mainproductwhole{
+    width: 70%;
+}
+
+.removeaddcart{
+    display: flex;
+    align-items: center;
+    gap: 3px;
+    margin-left: 30px;
+    cursor: pointer;
+}
+
+.removeaddcart button{
+    background-color: transparent;
+    border: none;
+    cursor: pointer;
+}
+
+.deladdbtn{
+    display: flex;
+    position:absolute;
+    bottom: 15px;
+    right: 30px;
+}
+
+.titlep{
+    font-weight: 500;
+    font-size: 14.5px;
+}
+
+.priceline :nth-child(2){
+    font-weight: 500;
+}
+
+.priceline :nth-child(3){
+    font-size: 13px;
+    text-decoration: line-through;
+    color: gray;
+}
+
+
+.priceline :nth-child(4){
+    font-size: 13px;
+    color: green;
+    font-weight: 500;
+}
+
+.hkline :nth-child(2){
+    font-size: 13px;
+}
+
+.hkline :nth-child(3){
+    font-size: 13px;
+    font-weight: 500;
+    color: green;
+}
+
+@media screen and (max-width : 950px) {
+    .mainWishPage{
+       display: flex;
+       flex-direction: column;
+       justify-content: center;
+       align-items: center;
+        font-family: "Roboto", sans-serif;;
+    }
+
+    .proimg img{
+        height: 70px;
+        width: 70px;
+    }
+
+    .titlep{
+        font-size: 13px;
+    }
+
+    .priceline > p{
+        font-size: 11px;
+    }
+
+    .hkline > p{
+        font-size: 11px;
+    }
+
+    .leftimgbanner{
+        display: none;
+    }
+
+    
+.mainproductwhole{
+    width: 90%;
+}
+
+.toporderforsmaller{
+    width: 90%;
+}
+
+.orderbox{
+    margin-left: 0;
+}
+
+}

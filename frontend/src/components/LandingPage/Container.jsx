@@ -9,6 +9,7 @@ import { positions } from '@mui/system';
 import { add_cart } from '../../redux/Cart/cart.actions';
 import { useDispatch } from 'react-redux';
 import {useNavigate} from "react-router-dom"
+import axios from 'axios';
 
 export const Container = ({item}) => {
     const [open, setOpen] = useState(false);
@@ -44,6 +45,22 @@ export const Container = ({item}) => {
       dispatch(add_cart(obj))
     }
 
+    const handleWatchList = (x)=>{
+        const payload = {
+          title : x.title,
+          img_url : x.img_url,
+          originalPrice : x.originalPrice,
+          rating : x.rating,
+          discountedPrice : x.discountedPrice
+      }
+      const con ={
+          url: `https://json-practice.herokuapp.com/watchlist`,
+          method:"post",
+          data:payload
+      }
+      return axios(con)
+      }
+
   return (
 <div>
         <div key={item.id} >
@@ -66,7 +83,7 @@ export const Container = ({item}) => {
                         </div>
                     </div> 
                     <div className={styles.imageWrapper}>
-                        <div className={styles.wishlistIcon}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/variant/wishlist/heart_plus.svg" alt="wishlist-icon" /></div>
+                        <div onClick={() => handleWatchList(item)} className={styles.wishlistIcon}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/variant/wishlist/heart_plus.svg" alt="wishlist-icon" /></div>
                         <img src={item.img_url} className={styles.itemImage} alt="Item-Images"></img>
                         <div><button className={styles.discountBtn}>{item.discount} off</button></div>
                     </div>        
