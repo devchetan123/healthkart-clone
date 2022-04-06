@@ -8,6 +8,7 @@
   
 - React
 - Redux
+- NodeJs
 - Express
 - MongoDB
 - Material UI
