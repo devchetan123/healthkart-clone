@@ -19,9 +19,11 @@ In this project we were able to built a near to perfect clone of the original we
 
 You can also take the glimpse of our Project, just follow the below steps:
 
-    1.run the command npm run start in terminal to start the app at port 3000.
-
-    2.Go to the browser you will land in the landing page just login using your mobile number.
+    1.Clone the repository into into your local system.
+    
+    2.got to the folder named frontend and run the command npm install in the terminal.
+    
+    3.Now run the command npm start from the same folder(frontend).
 
 <br>
 
