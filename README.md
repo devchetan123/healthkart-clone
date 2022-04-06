@@ -5,13 +5,12 @@
   <p>In this project we have tried to make a look alike clone of HealthKart. A visual replica of HealthKart with user authentication, adding products to cart, wishlist and checkout. </p>
   
   # Technology Stack Used 💻
-- HTML
-- CSS
-- Javascript
+  
 - React
 - Redux
 - Express
 - MongoDB
+- Material UI
 
 ## How to run the project 📑
 
