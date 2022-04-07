@@ -8,6 +8,11 @@
 .mobileView{
   display: none;
 }
+
+.navContainer{
+  background-color: white;
+}
+
 .navtopsection{
   font-family: "Roboto", sans-serif;
   display: flex;

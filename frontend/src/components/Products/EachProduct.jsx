@@ -47,7 +47,6 @@ export default function EachProduct() {
   return axios(con)
   }
 
-
   const dispatch = useDispatch();
 
     const addCartFunc = (x) => {

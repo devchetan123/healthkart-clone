@@ -26,8 +26,8 @@ export const SwiperSlider = () => {
             NavButton={({onClick, className, style, next, prev}) => {
                 return (
                     <div onClick={onClick} className={className}>
-                        {next && <ArrowForwardIosIcon sx={{color: "rgb(119,156,191)", backgroundColor: "transparent", width: "35px", height:"35px", marginTop: "135.5px", marginBottom: "135.5px", paddingRight: "30px",cursor: "pointer"}}/>}
-                        {prev && <ArrowBackIosIcon sx={{color: "rgb(119,156,191)", backgroundColor: "transparent", width: "35px", height:"35px", marginTop: "135.5px", marginBottom: "135.5px", paddingLeft: "30px", cursor: "pointer"}}/>}
+                        {next && <ArrowForwardIosIcon sx={{color: "rgb(119,156,191)", backgroundColor: "transparent", width: "60px", height:"60px", marginTop: "130px", marginBottom: "135.5px", paddingRight: "30px",cursor: "pointer" }}/>}
+                        {prev && <ArrowBackIosIcon sx={{color: "rgb(119,156,191)", backgroundColor: "transparent", width: "60px", height:"60px", marginTop: "130px", marginBottom: "135.5px", paddingLeft: "30px", cursor: "pointer"}}/>}
                     </div>
                 )
             }}

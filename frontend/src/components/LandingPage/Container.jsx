@@ -85,7 +85,7 @@ export const Container = ({item}) => {
                     <div className={styles.imageWrapper}>
                         <div onClick={() => handleWatchList(item)} className={styles.wishlistIcon}><img src="https://static1.hkrtcdn.com/hknext/static/media/common/variant/wishlist/heart_plus.svg" alt="wishlist-icon" /></div>
                         <img src={item.img_url} className={styles.itemImage} alt="Item-Images"></img>
-                        <div><button className={styles.discountBtn}>{item.discount} off</button></div>
+                        <div><button className={styles.discountBtn}>20% off</button></div>
                     </div>        
                     <div className={styles.detailsWrapper}>
                         <h5 className={styles.title} onClick={()=>navigate(`/products/${item._id}`)}>{item.title}</h5>
