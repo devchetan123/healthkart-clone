@@ -59,7 +59,7 @@ function NavbarTopSec() {
   );
 
   return (
-    <div>
+    <div className={style.navContainer} >
         <div  className={style.navtopsection} >
         <img onClick={() => navigate("/")}  src="https://i.ibb.co/NWKgftw/Screenshot-13.png" alt="" height={"60px"} />
         <div className={style.searchDiv} >
@@ -112,7 +112,7 @@ function NavbarTopSec() {
                             <SearchIcon/>
                             </Typography>
                             <Typography>
-                            <ShoppingCartIcon/>
+                            <ShoppingCartIcon onClick={() => navigate("/cart")} />
                             </Typography>
                             <Drawer open={open} anchor="left" onClose={toggleSlider}>
                                       {sideList()}
